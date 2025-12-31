@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Amazom Festival</title>
+    <link rel="icon" type="image/png" href="Image/fes.png">
+	<style type="text/css">
+		body
+		{
+			background-color: white;
+		}
+		#bod1 {
+			border: 2px solid black;
+			width: 1534px;
+			height: 60px;
+			background-color: #131921;
+			margin-left: -10px;
+			margin-top: -7px;
+			display: inline-block;
+		}
+		#Amazom {
+			width: 150px;
+			height: 50px;
+			margin-top: 4px;
+			margin-left: 5px;
+			display: inline-block;
+		}
+		#Amazom:hover, #add:hover, #lan:hover, #acc:hover, #ord:hover, #cart:hover {
+			border: 2px solid white;
+		}
+		#loca {
+			width: 25px;
+			height: 20px;
+			margin-left: 10px;
+			margin-top: -25px;
+		}
+		#p1 {
+			display: inline-block;
+			color: #EDEADE;
+		}
+		#lan {
+			padding-top: 15px;
+			margin-left: 10px;
+
+
+		}
+		#m1 {
+			margin-left: 80%;
+			display: inline-block;
+			margin-top: -20px;
+		}
+		#cart {
+			display: inline-block;
+		}
+
+		#sel1 
+		 {
+             margin-top: 0; /* Remove the conflicting margin */
+             position: relative;
+             top: -22px; /* Move the select element 10px upwards */
+             display: inline-block;
+         }
+         #in1
+         {
+         	margin-left: -5px;
+         	width: 600px;
+         	height: 35px;
+         }
+         #im2 
+         {
+             position: relative;
+             top: 16.9px; /* Move the image 20px upwards */
+             height: 40.8px;
+             margin-left: -5px;
+         } 
+
+         #bod2
+          {
+			border: 2px solid #202d3b;
+			width: 1534px;
+			height: 40px;
+			background-color: #202d3b;
+			margin-left: -10px;
+			margin-top: -7px;			
+		}
+		#ss1,#ss2,#ss3,#ss4,#ss5,#ss6,#ss7,#ss8,#ss9,#ss10,#ss11,#ss12,#ss13,#ss14,#ss15,#ss16
+		{
+			display: inline-block;
+			color: white;
+			padding-right: 20px;
+			margin-top: 15px;
+
+		}
+		#ss1{
+			margin-left: 20px;
+		}
+		
+		.fo1
+		{
+			font-size: 20px;
+			font-weight:bold;
+			color: white;
+
+		}
+		#div1
+		{
+
+           margin-top:20px;
+           position: absolute;
+           color: #999999;
+           margin-left: 350px;
+		   font-family: Arial, sans-serif;
+		}
+		#div2
+		{
+            margin-top: 20px;
+            position: absolute;
+            color: #999999;
+            margin-left: 550px;
+			font-family: Arial, sans-serif;
+		}
+		#div3
+		{
+			margin-top: 20px;
+			position: absolute;
+			color: #999999;
+			margin-left: 750px;
+			font-family: Arial, sans-serif;
+			
+
+
+		}
+		#div4
+		{
+			font-style:Arial;
+			margin-top: 20px;
+			position: absolute;
+			color: #999999;
+			margin-left: 1020px;
+			font-family: Arial, sans-serif;
+
+		}
+		.amazon-footer-bottom 
+        {
+  background-color: #131A22;
+  color: #DDDDDD;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  margin-left:-20px;
+  margin-right: -20px;
+}
+
+.footer-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-services h5 {
+  font-size: 13px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.footer-services p {
+  font-size: 12px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-links a {
+  color: #DDDDDD;
+  font-size: 12px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  margin-top: 10px;
+}
+#t1
+{
+    font-size: 32px;
+    color: orange;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    padding-top:10px;
+}
+#t2
+{
+    font-size: 14px;
+    color: rgb(124, 124, 127);
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+
+	</style>
+</head>
+<body tyle="background:lightblue;">
+
+<div>
+	<nav>
+		<div id="bod1">
+			<img src="Image/Amazon.png" alt="Amazom" id="Amazom">
+			<img src="Image/add.png" alt="add" id="add">
+			<div id="sel1"><select style="width: 60px; height: 40px;">
+			<option>All</option>
+			<option>All</option>
+			<option>Alexa Skills</option>
+			<option>Amazon Devices</option>
+			<option>Amazon Fashion</option>
+			<option>Amazon Fresh</option>
+			<option>Amazon Pharmacy</option>
+			<option>Apps & Games</option>
+			<option>Audible Audiobooks</option>
+			<option>Baby</option>
+			<option>Beauty</option>
+			<option>Books</option>
+			<option>Car & Motorbike</option>
+			<option>Computers & Accessories</option>
+			<option>Deals</option>
+			<option>Electronics</option>
+			<option>Furniture</option>
+			<option>Garden & Outdoors</option>
+		    </select>
+		    <input type="text" name="txt1" placeholder=" Search Amazom.in" id="in1">
+		    <img src="Image/sec.png" id="im2" style="margin-top: 0px;">
+		    </div>
+		    <img src="Image/lan.png" alt="lan" id="lan">
+			<img src="Image/acc.png" alt="acc" id="acc">
+			<img src="Image/ord.png" alt="ord" id="ord">
+			<img src="Image/cart.png" alt="cart" id="cart">					
+		</div>
+	</nav>
+</div>
+
+<div>
+	
+		<div id="bod2">
+		<div id="ss1">All</div>
+		<div id="ss2">Fresh</div>
+		<div id="ss3">MX Player</div>
+		<div id="ss4">Sell</div>
+		<div id="ss5">Best Sellers</div>
+		<div id="ss6">Today's Deals</div>
+		<div id="ss7">Mobiles</div>
+		<div id="ss8">Electronics</div>
+		<div id="ss9">Home & Kitchen</div>
+		<div id="ss10">Customer Service</div>
+		<div id="ss11">Prime</div>
+		<div id="ss12">Amazom Pay</div>
+		<div id="ss13">New Releas</div>
+		<div id="ss14">Fashion</div>
+		<div id="ss15">Car & Motorbike</div>
+		<div id="ss16">computer</div>
+        </div>
+	</nav>
+</div>
+ <div id="t1">
+    Shop for Kitchen, Furniture, Inverter batteries and more from stores nearby
+ </div>
+ <div id="t2">
+    Browse through a wide range of products such as <span style="color:blue">air conditioners, refrigerators, dining tables, inverter batteries, home furnishing, kitchen appliances, fresh flowers</span> and more on Local Shops
+ </div>
+
+
+
+ <div style="padding-top: 10px; padding-bottom: 10px; padding-top:20px;padding-bottom: 30px;">
+    <img src="Image/head.gif" alt="head">
+ </div>
+
+
+  <div>
+    <img src="Image/far.png" alt="far" style="width: 99%;">
+ </div>
+
+
+
+
+
+
+    <div id="related-slider" 
+         style="border:2px solid rgb(254, 254, 254);
+                height:260px;
+                width:100%;
+                background-color:white;
+                overflow-x:auto;
+                white-space:nowrap;
+                display:flex;
+                align-items:center;
+                scroll-behavior:smooth;">
+
+        <img src="Image/199.gif" style="height:220px; margin:10px; margin-right:30px;">
+        <img src="Image/299.gif" style="height:220px; margin:10px; margin-right:30px;">
+        <img src="Image/499.gif" style="height:220px; margin:10px; margin-right:30px ;">
+        <img src="Image/799.gif" style="height:220px; margin:10px; margin-right:30px;">
+        <img src="Image/999.gif" style="height:220px; margin:10px; margin-right:30px;">
+        <img src="Image/1499.gif" style="height:220px; margin:10px; margin-right:30px;">
+
+    </div>
+
+
+<div>
+	<img style="width:98%; margin-left:12px; margin-left:13px;" src="Image/rip.png" alt="rip" >
+</div>
+
+
+
+
+
+
+    <div id="related-slider" 
+         style="border:2px solid rgb(254, 254, 254);
+                height:260px;
+                width:100%;
+                background-color:white;
+                overflow-x:auto;
+                white-space:nowrap;
+                display:flex;
+                align-items:center;
+                scroll-behavior:smooth;">
+
+        <a href="ktm.html"><img src="Image/KTM.jpg" style="height:220px; margin:10px; margin-right:30px; margin-left: 40px;"></a>
+        <a href="triumph.html"><img src="Image/TRIUMPH.jpg" style="height:220px; margin:10px; margin-right:30px;"></a>
+        <a href="royal.html"><img src="Image/gt.png" style="height:220px; margin:10px; margin-right:30px ;"></a>
+        
+
+    </div>
+
+
+
+
+
+
+
+    <section style="border:2px solid #122430;height: 450px; width:1531px;background-color:#122430; color: darkred;margin-left:-10px;">
+	<div id="div1">
+		<p class="fo1">Get to Know Us</p>
+        <p>About Amazon</p>
+        <p>Careers</p>
+        <p>Press Releases</p>
+        <p>Amazon Science</p>
+	</div>
+
+	<div id="div2">
+		<p class="fo1">Connect with Us</p>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+	</div>
+
+	<div id="div3">
+		<p class="fo1">Make Money with Us</p>
+        <p>Sell on Amazon</p>
+        <p>Sell under Amazon Accelerator</p>
+        <p>Protect and Build Your Brand</p>
+        <p>Amazon Global Selling</p>
+        <p>Supply to Amazon</p>
+        <p>Become an Affiliate</p>
+        <p>Fulfilment by Amazon</p>
+        <p>Advertise Your Products</p>
+        <p>Amazon Pay on Merchants</p>
+	</div>
+
+	<div id="div4">
+		<p class="fo1">Let Us Help You</p>
+        <p>Your Account</p>
+        <p>Returns Centre</p>
+        <p>Recalls and Product Safety Alerts</p>
+        <p>100% Purchase Protection</p>
+        <p>Amazon App Download</p>
+        <p>Help</p>
+	</div>
+	</section>
+</footer>
+
+<!-- AMAZON BOTTOM FOOTER -->
+<div class="amazon-footer-bottom">
+
+  <div class="footer-services">
+    <div>
+      <h5>AbeBooks</h5>
+      <p>Books, art<br>& collectibles</p>
+    </div>
+
+    <div>
+      <h5>Amazon Web Services</h5>
+      <p>Scalable Cloud<br>Computing Services</p>
+    </div>
+
+    <div>
+      <h5>Audible</h5>
+      <p>Download<br>Audio Books</p>
+    </div>
+
+    <div>
+      <h5>IMDb</h5>
+      <p>Movies, TV<br>& Celebrities</p>
+    </div>
+
+    <div>
+      <h5>Shopbop</h5>
+      <p>Designer<br>Fashion Brands</p>
+    </div>
+
+    <div>
+      <h5>Amazon Business</h5>
+      <p>Everything For<br>Your Business</p>
+    </div>
+
+    <div>
+      <h5>Amazon Prime Music</h5>
+      <p>100 million songs, ad-free<br>
+         Over 15 million podcast episodes</p>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="#">Conditions of Use & Sale</a>
+    <a href="#">Privacy Notice</a>
+    <a href="#">Interest-Based Ads</a>
+  </div>
+
+  <p class="footer-copy">
+    © 1996-2025, Amazon.com, Inc. or its affiliates
+  </p>
+
+</div>
+
+
+</body>
+</html>

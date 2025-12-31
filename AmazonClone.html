@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Amazom Clone</title>
+    <link rel="icon" type="image/png" href="Image/download.png">
+	<style type="text/css">
+		body
+		{
+			background-color: lightgray;
+		}
+		#bod1 {
+			border: 2px solid black;
+			width: 1534px;
+			height: 60px;
+			background-color: #131921;
+			margin-left: -10px;
+			margin-top: -7px;
+			display: inline-block;
+		}
+		#Amazom {
+			width: 150px;
+			height: 50px;
+			margin-top: 4px;
+			margin-left: 5px;
+			display: inline-block;
+		}
+		#Amazom:hover, #add:hover, #lan:hover, #acc:hover, #ord:hover, #cart:hover {
+			border: 2px solid white;
+		}
+		#loca {
+			width: 25px;
+			height: 20px;
+			margin-left: 10px;
+			margin-top: -25px;
+		}
+		#p1 {
+			display: inline-block;
+			color: #EDEADE;
+		}
+		#lan {
+			padding-top: 15px;
+			margin-left: 10px;
+
+
+		}
+		#m1 {
+			margin-left: 80%;
+			display: inline-block;
+			margin-top: -20px;
+		}
+		#cart {
+			display: inline-block;
+		}
+
+		#sel1 
+		 {
+             margin-top: 0; /* Remove the conflicting margin */
+             position: relative;
+             top: -22px; /* Move the select element 10px upwards */
+             display: inline-block;
+         }
+         #in1
+         {
+         	margin-left: -5px;
+         	width: 600px;
+         	height: 35px;
+         }
+         #im2 
+         {
+             position: relative;
+             top: 16.9px; /* Move the image 20px upwards */
+             height: 40.8px;
+             margin-left: -5px;
+         } 
+
+         #bod2
+          {
+			border: 2px solid #202d3b;
+			width: 1534px;
+			height: 40px;
+			background-color: #202d3b;
+			margin-left: -10px;
+			margin-top: -7px;			
+		}
+		#ss1,#ss2,#ss3,#ss4,#ss5,#ss6,#ss7,#ss8,#ss9,#ss10,#ss11,#ss12,#ss13,#ss14,#ss15,#ss16
+		{
+			display: inline-block;
+			color: white;
+			padding-right: 20px;
+			margin-top: 15px;
+
+		}
+		#ss1{
+			margin-left: 20px;
+		}
+		#pic
+		{
+			margin-left: -20px;
+			position: relative;
+
+		}
+		#bb1
+		{
+			height: 60px;
+			font-size: 40px;
+			cursor: pointer;
+			background-color:white;
+			color: black;
+			border-radius: 10px;
+			border: transparent;
+			position: absolute;
+			top: 220px;
+			left:20px ;
+		}
+		#bb2
+		{
+			height: 60px;
+			font-size: 40px;
+			cursor: pointer;
+			background-color:white;
+			color: black;
+			border-radius: 10px;
+			border: transparent;
+			position: absolute;
+			top: 220px;
+			left:1480px;
+		}
+
+		#dd1,#dd2,#dd3,#dd4,#dd5,#dd6,#dd7,#dd8,#dd9
+		{
+			background-color: white;
+			position: absolute;
+		}
+		#dd1
+		{
+			margin-top: -450px;
+			margin-left: 80px;
+		}
+		#dd2
+		{
+			margin-left: 560px;
+			margin-top: -450px;
+		}
+		#dd3
+		{
+			margin-left: 1060px;
+			margin-top: -450px;
+		}
+		#dd4
+		{
+			margin-left: 90px;
+			margin-top: 50px;
+
+		}
+		#dd5
+		{
+			margin-left: 570px;
+			margin-top: 50px;
+		}
+		#dd6
+		{
+			margin-left: 1070px;
+			margin-top: 50px;
+		}
+		#dd7
+		{
+			margin-top: 60px;
+			margin-left: 90px;
+		}
+		#dd8
+		{
+			margin-top: 60px;
+			margin-left: 570px;
+		}
+		#dd9
+		{
+			margin-top: 60px;
+			margin-left: 1070px;
+		}
+		#sec1
+		{
+			border: 2px solid lightgray;
+			height: 540px;
+			width: 1534px;
+			margin-left: -10px;
+			margin-top: -4px;
+			background-color:lightgray;
+		}
+		#sec2
+		{
+			border: 2px solid lightgray;
+			height: 540px;
+			width: 1534px;
+			margin-left: -10px;
+			margin-top: -4px;
+			background-color:lightgray;
+		}
+		.fo1
+		{
+			font-size: 20px;
+			font-weight:bold;
+			color: white;
+
+		}
+		#div1
+		{
+
+           margin-top:20px;
+           position: absolute;
+           color: #999999;
+           margin-left: 350px;
+		   font-family: Arial, sans-serif;
+		}
+		#div2
+		{
+            margin-top: 20px;
+            position: absolute;
+            color: #999999;
+            margin-left: 550px;
+			font-family: Arial, sans-serif;
+		}
+		#div3
+		{
+			margin-top: 20px;
+			position: absolute;
+			color: #999999;
+			margin-left: 750px;
+			font-family: Arial, sans-serif;
+			
+
+
+		}
+		#div4
+		{
+			font-style:Arial;
+			margin-top: 20px;
+			position: absolute;
+			color: #999999;
+			margin-left: 1020px;
+			font-family: Arial, sans-serif;
+
+		}
+		
+
+
+
+
+
+
+
+
+.winter-button {
+    position: relative;
+    display: inline-block;
+    padding: 30px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 15px 35px rgba(58, 123, 213, 0.4);
+    overflow: hidden;
+    transition: all 0.3s ease;
+	padding-left: 200px;
+	padding-right: 200px;
+	margin-left: 350px;
+	margin-top: 30px;
+}
+
+.winter-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.winter-button:hover::before {
+    left: 100%;
+}
+
+.winter-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(58, 123, 213, 0.6);
+}
+
+.winter-button:active {
+    transform: translateY(-2px);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.discount {
+    font-size: 48px;
+    font-weight: 900;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.offer-text {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.snowflake {
+    display: inline-block;
+    animation: rotate 4s linear infinite;
+    font-size: 24px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+		.amazon-footer-bottom {
+  background-color: #131A22;
+  color: #DDDDDD;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  margin-left:-20px;
+  margin-right: -20px;
+}
+
+.footer-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-services h5 {
+  font-size: 13px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.footer-services p {
+  font-size: 12px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-links a {
+  color: #DDDDDD;
+  font-size: 12px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  margin-top: 10px;
+}
+
+
+
+	</style>
+</head>
+<body tyle="background:lightblue;">
+
+<div>
+	<nav>
+		<div id="bod1">
+			<img src="Image/Amazon.png" alt="Amazom" id="Amazom">
+			<img src="Image/add.png" alt="add" id="add">
+			<div id="sel1"><select style="width: 60px; height: 40px;">
+			<option>All</option>
+			<option>All</option>
+			<option>Alexa Skills</option>
+			<option>Amazon Devices</option>
+			<option>Amazon Fashion</option>
+			<option>Amazon Fresh</option>
+			<option>Amazon Pharmacy</option>
+			<option>Apps & Games</option>
+			<option>Audible Audiobooks</option>
+			<option>Baby</option>
+			<option>Beauty</option>
+			<option>Books</option>
+			<option>Car & Motorbike</option>
+			<option>Computers & Accessories</option>
+			<option>Deals</option>
+			<option>Electronics</option>
+			<option>Furniture</option>
+			<option>Garden & Outdoors</option>
+		    </select>
+		    <input type="text" name="txt1" placeholder=" Search Amazom.in" id="in1">
+		    <img src="Image/sec.png" id="im2" style="margin-top: 0px;">
+		    </div>
+		    <img src="Image/lan.png" alt="lan" id="lan">
+			<img src="Image/acc.png" alt="acc" id="acc">
+			<img src="Image/ord.png" alt="ord" id="ord">
+			<img src="Image/cart.png" alt="cart" id="cart">					
+		</div>
+	</nav>
+</div>
+
+<div>
+	
+		<div id="bod2">
+		<div id="ss1">All</div>
+		<div id="ss2">Fresh</div>
+		<div id="ss3">MX Player</div>
+		<div id="ss4">Sell</div>
+		<div id="ss5">Best Sellers</div>
+		<div id="ss6">Today's Deals</div>
+		<div id="ss7">Mobiles</div>
+		<div id="ss8">Electronics</div>
+		<div id="ss9">Home & Kitchen</div>
+		<div id="ss10">Customer Service</div>
+		<div id="ss11">Prime</div>
+		<div id="ss12">Amazom Pay</div>
+		<div id="ss13">New Releas</div>
+		<div id="ss14">Fashion</div>
+		<div id="ss15">Car & Motorbike</div>
+		<div id="ss16">computer</div>
+        </div>
+	</nav>
+</div>
+
+<img src="Image/Ama11.jpg" id="pic" alt="picture" width="1547px" height="800px">
+<input type="button" id="bb1" name="b1" value="<" onclick="Previous();">
+<input type="button" id="bb2" name="b1" value=">" onclick="next();">	
+<script type="text/javascript">	
+i=0;
+function Previous()
+{
+	var getPi1=document.getElementById("pic");
+	var arrPic1=new Array("Image/Ama7.jpg","Image/Ama11.jpg","Image/Ama2.png","Image/Ama3.jpg","Image/Ama4.jpg","Image/Ama5.jpg","Image/Ama6.png");
+	i--;
+	if(i<0)
+	{
+		i=arrPic1.length-1;
+	}
+	getPi1.src=arrPic1[i];
+}
+function next()
+{
+	var getPi=document.getElementById("pic");
+	var arrPic=new Array("Image/Ama7.jpg","Image/Ama2.png","Image/Ama3.jpg","Image/Ama4.jpg","Image/Ama5.jpg","Image/Ama6.png","Image/Ama11.jpg");
+	i++;
+	if(i==arrPic.length)
+	{
+		i=0;
+	}
+	getPi.src=arrPic[i];
+}
+setInterval(next,2000);
+</script>
+
+<section>
+
+
+	<div  id="dd1" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Revamp your home in style</p>
+		<img src="Image/ff1.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd2" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Starting ₹149 | Headphones</p>
+		<img src="Image/ff2.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd3" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Explore more from Small Businesses</p>
+		<img src="Image/ff3.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px;">Explore all</p></a>	
+	</div>
+    
+
+    <section id="sec1">
+
+	<div  id="dd4" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Appliances for your home | Up to 55% off</p>
+		<img src="Image/ff4.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd5" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Starting ₹199 | Amazon Brands & more</p>
+		<img src="Image/ff5.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top: -2px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd6" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Min. 40% off | Fun toys for little ones | Amazon brands</p>
+		<img src="Image/ff6.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top:-4px;">Explore all</p></a>	
+	</div> 
+	</section>
+
+	<section id="sec2">
+	<div  id="dd7" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Up to 60% off | Best offers on furniture from stores near you</p>
+		<img src="Image/ff7.png" style="width:340px; padding-left: 15px; margin-top:-25px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top: -5px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd8" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Up to 80% off | Top deals in home furnishings</p>
+		<img src="Image/ff8.png" style="width:340px; padding-left: 15px; margin-top:-30px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top:-3px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd9" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;">Customers’ Most-Loved products</p>
+		<img src="Image/ff9.png" style="width:340px; padding-left: 10px; margin-top:-10px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top:-5px;">Explore all</p></a>	
+	</div>
+    </section>
+
+<section>
+	<div style="border:2px solid white; height:300px; width:1434px; background-color:white; margin:30px auto;">
+
+    <p style="font-size:24px; font-weight:bold; margin:15px;">
+        Related to items you've viewed
+        <a href="#" style="color:blue; margin-left:15px; text-decoration:none;">
+            See more
+        </a>
+    </p>
+
+    <div id="related-slider" 
+         style="border:2px solid rgb(255, 255, 255);
+                height:260px;
+                width:100%;
+                background-color:white;
+                overflow-x:auto;
+                white-space:nowrap;
+                display:flex;
+                align-items:center;
+                scroll-behavior:smooth;">
+
+        <img src="Image/TWS (3).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/TWS (2).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/TWS (1).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/TWS (5).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/TWS (7).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/TWS (6).jpg" style="height:220px; margin:10px; margin-right:40px;">
+
+    </div>
+</div>
+
+<div style="border:2px solid white; height:300px; width:1434px; background-color:white; margin:30px auto; margin-top: 50px;">
+
+    <p style="font-size:24px; font-weight:bold; margin:15px;">
+        Related to items you've viewed
+        <a href="#" style="color:blue; margin-left:15px; text-decoration:none;">
+            See more
+        </a>
+    </p>
+
+    <div id="related-slider" 
+         style="border:2px solid rgb(254, 254, 254);
+                height:260px;
+                width:100%;
+                background-color:white;
+                overflow-x:auto;
+                white-space:nowrap;
+                display:flex;
+                align-items:center;
+                scroll-behavior:smooth;">
+
+        <img src="Image/bike (5).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/bike (6).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/bike (7).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/bike (8).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/bike (3).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/bike (4).jpg" style="height:220px; margin:10px; margin-right:40px;">
+		<img src="Image/bike(77).jpg" style="height:220px; margin:10px; margin-right:40px;">
+
+    </div>
+</div>
+
+<section id="sec2">
+	<div  id="dd7" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;"></p>
+		<img src="Image/akl (1).png" style="width:340px; padding-left: 15px; margin-top:-25px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top: -20px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd8" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;"></p>
+		<img src="Image/akl (2).png" style="width:340px; padding-left: 15px; margin-top:-28px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top:-16px;">Explore all</p></a>	
+	</div>
+
+	<div  id="dd9" style="border: 2px solid white; height: 420px; width:370px;">
+		<p style="font-size: 27px; margin-top:5px; margin-left:10px; font-weight: bold;"></p>
+		<img src="Image/akl (3).png" style="width:340px; padding-left: 10px; margin-top:-20px;">	
+		<a href=""><p style="color: blue; padding-left: 25px; margin-top:-28px;">Explore all</p></a>	
+	</div>
+    </section>
+
+<div style="border:2px solid white; height:300px; width:1434px; background-color:white; margin:30px auto; margin-top:30px;">
+
+    <p style="font-size:24px; font-weight:bold; margin:15px;">
+        Related to items you've viewed
+        <a href="#" style="color:blue; margin-left:15px; text-decoration:none;">See more</a>
+    </p>
+
+    <div id="related-slider"
+         style="border:2px solid rgb(254,254,254);
+                height:260px;
+                width:100%;
+                background-color:white;
+                overflow-x:auto;
+                white-space:nowrap;
+                display:flex;
+                align-items:center;
+                scroll-behavior:smooth;">
+
+        <!-- 🔥 VIDEO CARD -->
+       <video
+    autoplay
+    muted
+    loop
+    playsinline
+    controls
+    style="height:220px; margin:10px; margin-right:40px; border-radius:8px; object-fit:cover;">
+    
+    <source src="Image/video.mp4" type="video/mp4">
+</video>
+
+
+        <!-- IMAGE CARDS -->
+        <img src="Image/laptop (1).jpg" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/laptop (1).webp" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/laptop (2).webp" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/laptop (3).webp" style="height:220px; margin:10px; margin-right:40px;">
+        <img src="Image/laptop (4).webp" style="height:220px; margin:10px; margin-right:40px;">
+    </div>
+</div>
+
+
+
+	<script type="text/javascript">	
+
+function sideScroll(direction) {
+    var container = document.getElementById('related-slider');
+    var scrollAmount = 0;
+    
+    // Determine how far to slide (e.g., 400px per click)
+    var distance = 400; 
+    var step = 10;
+    
+    var slideTimer = setInterval(function(){
+        if(direction == 'left'){
+            container.scrollLeft -= step;
+        } else {
+            container.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+    }, 10); // Adjust speed here
+}
+</script>
+
+</section>
+
+
+
+<a href="Amazontwo.html" class="winter-button">
+    <div class="button-content">
+        <div class="discount">
+            <span class="snowflake">❄️</span>
+            70% OFF
+            <span class="snowflake">❄️</span>
+        </div>
+        <div class="offer-text">
+            Claim Winter Festival Offer
+        </div>
+    </div>
+</a>
+
+
+<footer>
+	<div>
+    <button onclick="scrollToTop()" 
+        style="width: 1534px; height:50px; margin-left:-10px; border: 2px solid #122430; background-color:#0d303e; color:white; margin-top:30px;">
+        Back to top
+    </button>
+</div>
+
+<script>
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // smooth scroll effect
+    });
+}
+</script>
+
+    <section style="border:2px solid #122430;height: 450px; width:1531px;background-color:#122430; color: darkred;margin-left:-10px;">
+	<div id="div1">
+		<p class="fo1">Get to Know Us</p>
+        <p>About Amazon</p>
+        <p>Careers</p>
+        <p>Press Releases</p>
+        <p>Amazon Science</p>
+	</div>
+
+	<div id="div2">
+		<p class="fo1">Connect with Us</p>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+	</div>
+
+	<div id="div3">
+		<p class="fo1">Make Money with Us</p>
+        <p>Sell on Amazon</p>
+        <p>Sell under Amazon Accelerator</p>
+        <p>Protect and Build Your Brand</p>
+        <p>Amazon Global Selling</p>
+        <p>Supply to Amazon</p>
+        <p>Become an Affiliate</p>
+        <p>Fulfilment by Amazon</p>
+        <p>Advertise Your Products</p>
+        <p>Amazon Pay on Merchants</p>
+	</div>
+
+	<div id="div4">
+		<p class="fo1">Let Us Help You</p>
+        <p>Your Account</p>
+        <p>Returns Centre</p>
+        <p>Recalls and Product Safety Alerts</p>
+        <p>100% Purchase Protection</p>
+        <p>Amazon App Download</p>
+        <p>Help</p>
+	</div>
+	</section>
+</footer>
+
+<!-- AMAZON BOTTOM FOOTER -->
+<div class="amazon-footer-bottom">
+
+  <div class="footer-services">
+    <div>
+      <h5>AbeBooks</h5>
+      <p>Books, art<br>& collectibles</p>
+    </div>
+
+    <div>
+      <h5>Amazon Web Services</h5>
+      <p>Scalable Cloud<br>Computing Services</p>
+    </div>
+
+    <div>
+      <h5>Audible</h5>
+      <p>Download<br>Audio Books</p>
+    </div>
+
+    <div>
+      <h5>IMDb</h5>
+      <p>Movies, TV<br>& Celebrities</p>
+    </div>
+
+    <div>
+      <h5>Shopbop</h5>
+      <p>Designer<br>Fashion Brands</p>
+    </div>
+
+    <div>
+      <h5>Amazon Business</h5>
+      <p>Everything For<br>Your Business</p>
+    </div>
+
+    <div>
+      <h5>Amazon Prime Music</h5>
+      <p>100 million songs, ad-free<br>
+         Over 15 million podcast episodes</p>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="#">Conditions of Use & Sale</a>
+    <a href="#">Privacy Notice</a>
+    <a href="#">Interest-Based Ads</a>
+  </div>
+
+  <p class="footer-copy">
+    © 1996-2025, Amazon.com, Inc. or its affiliates
+  </p>
+
+</div>
+
+
+</body>
+</html>
