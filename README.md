@@ -58,6 +58,7 @@ This project focuses purely on **UI structure and styling practice**.
 
 ## ✨ Key Features
 
+
 - Clean and simple user interface inspired by Amazon  
 - Product listing sections with images, names, and prices  
 - Multiple pages connected through navigation links  
