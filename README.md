@@ -81,7 +81,8 @@ By working on this project, I improved my understanding of:
 
 ## 🚀 Live Project
 
-👉 **View the project here:**  
+👉 **View the project here:** 
+
 https://kishor165.github.io/Amazon_clone_page/
 
 ---
