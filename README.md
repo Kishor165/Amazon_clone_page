@@ -7,6 +7,7 @@
 
 ## 📌 Project Description
 
+
 This project is a **static Amazon-inspired clone website** developed to **enhance my front-end development skills** and gain hands-on experience with core web technologies.
 
 The website layout, product sections, and navigation are designed to resemble an e-commerce platform similar to Amazon, with a primary focus on **visual structure and user interface design**.
