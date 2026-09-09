@@ -50,6 +50,7 @@ This project focuses purely on **UI structure and styling practice**.
 
 ## 🛠️ Technologies Used
 
+
 - **HTML5** – For structuring web pages and content  
 - **CSS3** – For styling, layout, and visual design  
 - **JavaScript** – For small interactive behaviors  
