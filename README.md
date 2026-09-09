@@ -91,6 +91,7 @@ https://kishor165.github.io/Amazon_clone_page/
 
 In the future, this project can be improved by:
 
+
 - Making the website fully responsive for all screen sizes  
 - Improving UI/UX design and visual consistency  
 - Adding a search feature (frontend only)  
