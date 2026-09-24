@@ -18,7 +18,6 @@ Through this project, I practiced creating well-structured web pages, organizing
 ---
 
 ## 🎯 Objective of the Project
-
 The main objectives of this project are:
 
 - To practice and strengthen **HTML page structuring** and semantic elements  
