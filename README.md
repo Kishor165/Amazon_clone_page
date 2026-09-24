@@ -6,7 +6,6 @@
 
 ## 📌 Project Description
 
-
 This project is a **static Amazon-inspired clone website** developed to **enhance my front-end development skills** and gain hands-on experience with core web technologies.
 
 
