@@ -32,7 +32,6 @@ The main objectives of this project are:
 
 ## 🧩 Scope of the Project
 
-
 - Frontend-only project  
 - Static pages (no dynamic data)  
 - No backend integration  
