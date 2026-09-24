@@ -1,5 +1,4 @@
 # 🛒 Amazon Clone Page (Static Frontend Project)
-
 🔗 **Live Demo:** https://kishor165.github.io/Amazon_clone_page/
 
 ---
