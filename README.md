@@ -13,7 +13,6 @@ The project is built using **pure HTML, CSS, and a small amount of JavaScript**,
 
 It is intended **only for viewing and learning purposes** and not for real-world commercial use.
 
-
 Through this project, I practiced creating well-structured web pages, organizing files properly, styling components, and adding simple interactivity to improve the overall user experience.
 
 ---
