@@ -10,7 +10,6 @@ This project is a **static Amazon-inspired clone website** developed to **enhanc
 
 The website layout, product sections, and navigation are designed to resemble an e-commerce platform similar to Amazon, with a primary focus on **visual structure and user interface design**.
 
-
 The project is built using **pure HTML, CSS, and a small amount of JavaScript**, without using any modern frameworks or libraries such as **React, Angular, Vue, or Bootstrap**.  
 
 It is intended **only for viewing and learning purposes** and not for real-world commercial use.
