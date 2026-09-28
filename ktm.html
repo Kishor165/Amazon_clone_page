@@ -1,614 +1,1566 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Amazom KTM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon KTM | KTM Bikes</title>
+
     <link rel="icon" type="image/png" href="Image/ktmicon.png">
-	<style type="text/css">
-		body
-		{
-			background-color: white;
-		}
-		#bod1 {
-			border: 2px solid black;
-			width: 1534px;
-			height: 60px;
-			background-color: #131921;
-			margin-left: -10px;
-			margin-top: -7px;
-			display: inline-block;
-		}
-		#Amazom {
-			width: 150px;
-			height: 50px;
-			margin-top: 4px;
-			margin-left: 5px;
-			display: inline-block;
-		}
-		#Amazom:hover, #add:hover, #lan:hover, #acc:hover, #ord:hover, #cart:hover {
-			border: 2px solid white;
-		}
-		#loca {
-			width: 25px;
-			height: 20px;
-			margin-left: 10px;
-			margin-top: -25px;
-		}
-		#p1 {
-			display: inline-block;
-			color: #EDEADE;
-		}
-		#lan {
-			padding-top: 15px;
-			margin-left: 10px;
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		}
-		#m1 {
-			margin-left: 80%;
-			display: inline-block;
-			margin-top: -20px;
-		}
-		#cart {
-			display: inline-block;
-		}
+        html {
+            scroll-behavior: smooth;
+        }
 
-		#sel1 
-		 {
-             margin-top: 0; /* Remove the conflicting margin */
-             position: relative;
-             top: -22px; /* Move the select element 10px upwards */
-             display: inline-block;
-         }
-         #in1
-         {
-         	margin-left: -5px;
-         	width: 600px;
-         	height: 35px;
-         }
-         #im2 
-         {
-             position: relative;
-             top: 16.9px; /* Move the image 20px upwards */
-             height: 40.8px;
-             margin-left: -5px;
-         } 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eaeded;
+            color: #111;
+        }
 
-         #bod2
-          {
-			border: 2px solid #202d3b;
-			width: 1534px;
-			height: 40px;
-			background-color: #202d3b;
-			margin-left: -10px;
-			margin-top: -7px;			
-		}
-		#ss1,#ss2,#ss3,#ss4,#ss5,#ss6,#ss7,#ss8,#ss9,#ss10,#ss11,#ss12,#ss13,#ss14,#ss15,#ss16
-		{
-			display: inline-block;
-			color: white;
-			padding-right: 20px;
-			margin-top: 15px;
+        /* =========================================
+           TOP AMAZON HEADER
+        ========================================= */
 
-		}
-		#ss1{
-			margin-left: 20px;
-		}
-		
-		.fo1
-		{
-			font-size: 20px;
-			font-weight:bold;
-			color: white;
+        #bod1 {
+            width: 100%;
+            min-height: 70px;
+            background: #131921;
+            display: flex;
+            align-items: center;
+            padding: 8px 18px;
+            gap: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
 
-		}
-		#div1
-		{
+        #Amazom {
+            width: 135px;
+            height: 48px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
 
-           margin-top:20px;
-           position: absolute;
-           color: #999999;
-           margin-left: 350px;
-		   font-family: Arial, sans-serif;
-		}
-		#div2
-		{
-            margin-top: 20px;
+        #Amazom:hover {
+            border: 1px solid white;
+        }
+
+        #add {
+            width: 100px;
+            height: 48px;
+            object-fit: contain;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        #add:hover,
+        #lan:hover,
+        #acc:hover,
+        #ord:hover,
+        #cart:hover {
+            border: 1px solid white;
+        }
+
+        /* Search */
+
+        #sel1 {
+            display: flex;
+            height: 42px;
+            flex: 1;
+            max-width: 680px;
+        }
+
+        #sel1 select {
+            width: 65px;
+            border: none;
+            background: #e6e6e6;
+            padding: 0 7px;
+            cursor: pointer;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #in1 {
+            flex: 1;
+            height: 42px;
+            border: none;
+            outline: none;
+            padding: 0 15px;
+            font-size: 15px;
+        }
+
+        #im2 {
+            width: 48px;
+            height: 42px;
+            object-fit: contain;
+            background: #febd69;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #im2:hover {
+            background: #f3a847;
+        }
+
+        #lan {
+            width: 65px;
+            height: 42px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #acc {
+            width: 85px;
+            height: 45px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #ord {
+            width: 80px;
+            height: 45px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #cart {
+            width: 65px;
+            height: 48px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* =========================================
+           SECOND NAVIGATION
+        ========================================= */
+
+        #bod2 {
+            width: 100%;
+            min-height: 46px;
+            background: #232f3e;
+            display: flex;
+            align-items: center;
+            padding: 0 18px;
+            gap: 5px;
+            overflow-x: auto;
+            white-space: nowrap;
+            position: sticky;
+            top: 70px;
+            z-index: 999;
+        }
+
+        #bod2::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        #bod2::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        #ss1,
+        #ss2,
+        #ss3,
+        #ss4,
+        #ss5,
+        #ss6,
+        #ss7,
+        #ss8,
+        #ss9,
+        #ss10,
+        #ss11,
+        #ss12,
+        #ss13,
+        #ss14,
+        #ss15,
+        #ss16 {
+            color: white;
+            padding: 12px 13px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: 0.2s;
+        }
+
+        #ss1 {
+            font-weight: bold;
+        }
+
+        #ss1:hover,
+        #ss2:hover,
+        #ss3:hover,
+        #ss4:hover,
+        #ss5:hover,
+        #ss6:hover,
+        #ss7:hover,
+        #ss8:hover,
+        #ss9:hover,
+        #ss10:hover,
+        #ss11:hover,
+        #ss12:hover,
+        #ss13:hover,
+        #ss14:hover,
+        #ss15:hover,
+        #ss16:hover {
+            border: 1px solid white;
+        }
+
+        /* =========================================
+           HERO SECTION
+        ========================================= */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 430px;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
             position: absolute;
-            color: #999999;
-            margin-left: 550px;
-			font-family: Arial, sans-serif;
-		}
-		#div3
-		{
-			margin-top: 20px;
-			position: absolute;
-			color: #999999;
-			margin-left: 750px;
-			font-family: Arial, sans-serif;
-			
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.78) 0%,
+                    rgba(0,0,0,0.35) 45%,
+                    rgba(0,0,0,0.05) 75%
+                );
+            display: flex;
+            align-items: center;
+            padding-left: 8%;
+        }
 
+        .hero-content {
+            color: white;
+            max-width: 520px;
+        }
 
-		}
-		#div4
-		{
-			font-style:Arial;
-			margin-top: 20px;
-			position: absolute;
-			color: #999999;
-			margin-left: 1020px;
-			font-family: Arial, sans-serif;
+        .hero-content small {
+            display: inline-block;
+            background: #ff5a00;
+            padding: 7px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
 
-		}
-		.amazon-footer-bottom 
-        {
-  background-color: #131A22;
-  color: #DDDDDD;
-  font-family: Arial, sans-serif;
-  padding: 40px 20px;
-  margin-left:-20px;
-  margin-right: -20px;
-}
+        .hero-content h1 {
+            font-size: 52px;
+            line-height: 1;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
 
-.footer-services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+        .hero-content h1 span {
+            color: #ff5a00;
+        }
 
-.footer-services h5 {
-  font-size: 13px;
-  color: #FFFFFF;
-  margin-bottom: 5px;
-}
+        .hero-content p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #ddd;
+            margin-bottom: 25px;
+        }
 
-.footer-services p {
-  font-size: 12px;
-  color: #999999;
-  line-height: 1.4;
-}
+        .hero-btn {
+            display: inline-block;
+            background: #ff5a00;
+            color: white;
+            text-decoration: none;
+            padding: 13px 28px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.footer-links {
-  text-align: center;
-  margin-top: 30px;
-}
+        .hero-btn:hover {
+            background: #ff7200;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,90,0,0.4);
+        }
 
-.footer-links a {
-  color: #DDDDDD;
-  font-size: 12px;
-  margin: 0 10px;
-  text-decoration: none;
-}
+        /* =========================================
+           SECTION TITLE
+        ========================================= */
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
+        .section-heading {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
 
-.footer-copy {
-  text-align: center;
-  font-size: 12px;
-  color: #999999;
-  margin-top: 10px;
-}
-#t1
-{
-    font-size: 32px;
-    color: orange;
-    background-color: white;
-    font-family: Arial, sans-serif;
-    padding-top:10px;
-}
-#t2
-{
-    font-size: 14px;
-    color: rgb(124, 124, 127);
-    background-color: white;
-    font-family: Arial, sans-serif;
-}
+        .section-heading h2 {
+            font-size: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
+        .section-heading h2 span {
+            color: #ff5a00;
+        }
 
+        .section-heading p {
+            margin-top: 8px;
+            color: #666;
+            font-size: 14px;
+        }
 
+        /* =========================================
+           PRODUCT GRID
+        ========================================= */
 
+        .product-grid {
+            width: 94%;
+            max-width: 1400px;
+            margin: 20px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 22px;
+        }
 
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 18px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+        }
 
+        .product-card::before {
+            content: "KTM";
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #ff5a00;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 5px 8px;
+            border-radius: 4px;
+        }
 
+        .product-img {
+            width: 100%;
+            height: 190px;
+            object-fit: contain;
+            margin-top: 8px;
+            transition: transform 0.35s ease;
+            cursor: pointer;
+        }
 
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
 
+        .product-title {
+            font-size: 17px;
+            margin: 15px 0 8px;
+            color: #171717;
+        }
 
-.product-card {
-  width: 220px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
+        .rating {
+            color: #ffa41c;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
 
-.product-img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  cursor: pointer;
-}
+        .rating span {
+            color: #007185;
+            margin-left: 5px;
+            font-size: 13px;
+        }
 
-.product-title {
-  font-size: 15px;
-  margin: 10px 0;
-  color: #0f1111;
-}
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            color: #b12704;
+            margin: 10px 0 15px;
+        }
 
-.rating {
-  color: #ffa41c;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
+        .add-cart {
+            width: 100%;
+            border: none;
+            background: #ffd814;
+            color: #111;
+            padding: 11px;
+            border-radius: 22px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.25s;
+        }
 
-.rating span {
-  color: #007185;
-  margin-left: 5px;
-}
+        .add-cart:hover {
+            background: #f7ca00;
+            transform: scale(1.02);
+        }
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #B12704;
-  margin: 8px 0;
-}
+        /* =========================================
+           KTM INFO BANNER
+        ========================================= */
 
-.add-cart {
-  background-color: #ffd814;
-  border: none;
-  padding: 8px;
-  width: 100%;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
+        .ktm-banner {
+            width: 94%;
+            max-width: 1400px;
+            min-height: 180px;
+            margin: 0 auto 55px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.9),
+                    rgba(0,0,0,0.45),
+                    rgba(0,0,0,0.1)
+                ),
+                url("Image/ktmwal.jpg") center/cover;
+            display: flex;
+            align-items: center;
+            padding: 35px 50px;
+            color: white;
+        }
 
-.add-cart:hover {
-  background-color: #f7ca00;
-}
+        .ktm-banner-content h2 {
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
 
-.product-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin-left: 70px;
-   margin-bottom: 50px;
-}
+        .ktm-banner-content h2 span {
+            color: #ff5a00;
+        }
 
-.product-grid {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+        .ktm-banner-content p {
+            color: #ddd;
+            font-size: 15px;
+        }
 
-.product-card {
-  width: 280px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.18);
-  font-family: Arial, sans-serif;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+        /* =========================================
+           OFFER BUTTON
+        ========================================= */
 
-.product-card:hover {
-  transform: scale(1.04);
-}
+        .winter-button {
+            position: relative;
+            display: block;
+            width: 850px;
+            max-width: 90%;
+            min-height: 150px;
+            margin: 45px auto;
+            padding: 22px 40px;
 
-.product-img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  cursor: pointer;
-}
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255,255,255,0.18),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(255,255,255,0.15),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0077b6,
+                    #023e8a,
+                    #03045e
+                );
 
-.product-title {
-  font-size: 17px;
-  margin: 12px 0;
-  color: #0f1111;
-}
+            color: white;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
 
-.rating {
-  color: #ffa41c;
-  font-size: 15px;
-  margin-bottom: 6px;
-}
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.25);
 
-.rating span {
-  color: #007185;
-  margin-left: 6px;
-}
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
 
-.price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #B12704;
-  margin: 10px 0;
-}
+        .winter-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 80%;
+            height: 100%;
 
-.add-cart {
-  background-color: #ffd814;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 22px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-}
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.25),
+                transparent
+            );
 
-.add-cart:hover {
-  background-color: #f7ca00;
-}
+            transform: skewX(-25deg);
+            transition: left 0.7s ease;
+        }
 
+        .winter-button:hover::before {
+            left: 140%;
+        }
 
+        .winter-button:hover {
+            transform: translateY(-7px);
 
+            box-shadow:
+                0 20px 45px rgba(0,0,0,0.35),
+                0 0 25px rgba(0,183,255,0.35);
+        }
 
+        .button-content {
+            position: relative;
+            z-index: 2;
 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-	</style>
+            gap: 8px;
+        }
+
+        .discount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+
+            font-size: 46px;
+            font-weight: 900;
+
+            color: #ffe600;
+            letter-spacing: 1px;
+
+            text-shadow:
+                2px 2px 0 #111,
+                0 0 12px rgba(255,230,0,0.4);
+        }
+
+        .offer-text {
+            font-size: 17px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: white;
+        }
+
+        .snowflake {
+            display: inline-block;
+            font-size: 28px;
+
+            animation:
+                snowRotate 4s linear infinite,
+                snowFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes snowRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes snowFloat {
+            0%, 100% {
+                margin-top: 0;
+            }
+
+            50% {
+                margin-top: -7px;
+            }
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .main-footer {
+            background: #232f3e;
+            color: #ddd;
+            padding: 55px 8% 35px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .footer-column p {
+            color: #bbb;
+            font-size: 13px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .footer-column p:hover {
+            color: white;
+            padding-left: 4px;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #3a4553;
+            margin: 40px 0 25px;
+        }
+
+        .footer-brand {
+            text-align: center;
+        }
+
+        .footer-brand img {
+            width: 130px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .amazon-footer-bottom {
+            background: #131a22;
+            color: #ddd;
+            padding: 35px 7%;
+        }
+
+        .footer-services {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-services h5 {
+            color: white;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .footer-services p {
+            color: #999;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            font-size: 12px;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copy {
+            text-align: center;
+            color: #777;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        /* =========================================
+           BACK TO TOP
+        ========================================= */
+
+        .back-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #ff5a00;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .back-top:hover {
+            transform: translateY(-5px);
+            background: #e64d00;
+        }
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1200px) {
+
+            #bod1 {
+                gap: 6px;
+            }
+
+            #add,
+            #lan,
+            #acc,
+            #ord {
+                display: none;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .hero-content h1 {
+                font-size: 45px;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            #bod1 {
+                min-height: 65px;
+                padding: 7px 10px;
+            }
+
+            #Amazom {
+                width: 105px;
+            }
+
+            #sel1 {
+                max-width: none;
+            }
+
+            #bod2 {
+                top: 65px;
+            }
+
+            .hero {
+                height: 350px;
+            }
+
+            .hero-content {
+                padding-left: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            #bod1 {
+                position: relative;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            #Amazom {
+                width: 105px;
+            }
+
+            #cart {
+                width: 50px;
+            }
+
+            #sel1 {
+                order: 2;
+                flex-basis: 100%;
+                width: 100%;
+            }
+
+            #bod2 {
+                position: relative;
+                top: 0;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero-overlay {
+                padding: 25px;
+            }
+
+            .hero-content h1 {
+                font-size: 31px;
+            }
+
+            .hero-content p {
+                font-size: 13px;
+            }
+
+            .hero-content small {
+                font-size: 11px;
+            }
+
+            .product-grid {
+                width: 92%;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .product-card {
+                padding: 12px;
+            }
+
+            .product-img {
+                height: 140px;
+            }
+
+            .product-title {
+                font-size: 14px;
+            }
+
+            .price {
+                font-size: 17px;
+            }
+
+            .add-cart {
+                font-size: 12px;
+            }
+
+            .ktm-banner {
+                padding: 25px;
+                min-height: 150px;
+            }
+
+            .ktm-banner-content h2 {
+                font-size: 23px;
+            }
+
+            .winter-button {
+                width: 94%;
+                min-height: 125px;
+                margin: 30px auto;
+                padding: 15px;
+                border-radius: 15px;
+            }
+
+            .discount {
+                font-size: 27px;
+                gap: 8px;
+            }
+
+            .offer-text {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            .snowflake {
+                font-size: 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-services {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            #Amazom {
+                width: 90px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-img {
+                height: 190px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-services {
+                grid-template-columns: 1fr;
+            }
+
+            .discount {
+                font-size: 23px;
+            }
+        }
+    </style>
 </head>
-<body tyle="background:lightblue;">
 
-<div>
-	<nav>
-		<div id="bod1">
-			<img src="Image/Amazon.png" alt="Amazom" id="Amazom">
-			<img src="Image/add.png" alt="add" id="add">
-			<div id="sel1"><select style="width: 60px; height: 40px;">
-			<option>All</option>
-			<option>All</option>
-			<option>Alexa Skills</option>
-			<option>Amazon Devices</option>
-			<option>Amazon Fashion</option>
-			<option>Amazon Fresh</option>
-			<option>Amazon Pharmacy</option>
-			<option>Apps & Games</option>
-			<option>Audible Audiobooks</option>
-			<option>Baby</option>
-			<option>Beauty</option>
-			<option>Books</option>
-			<option>Car & Motorbike</option>
-			<option>Computers & Accessories</option>
-			<option>Deals</option>
-			<option>Electronics</option>
-			<option>Furniture</option>
-			<option>Garden & Outdoors</option>
-		    </select>
-		    <input type="text" name="txt1" placeholder=" Search Amazom.in" id="in1">
-		    <img src="Image/sec.png" id="im2" style="margin-top: 0px;">
-		    </div>
-		    <img src="Image/lan.png" alt="lan" id="lan">
-			<img src="Image/acc.png" alt="acc" id="acc">
-			<img src="Image/ord.png" alt="ord" id="ord">
-			<img src="Image/cart.png" alt="cart" id="cart">					
-		</div>
-	</nav>
-</div>
+<body>
 
-<div>
-	
-		<div id="bod2">
-		<div id="ss1">All</div>
-		<div id="ss2">Fresh</div>
-		<div id="ss3">MX Player</div>
-		<div id="ss4">Sell</div>
-		<div id="ss5">Best Sellers</div>
-		<div id="ss6">Today's Deals</div>
-		<div id="ss7">Mobiles</div>
-		<div id="ss8">Electronics</div>
-		<div id="ss9">Home & Kitchen</div>
-		<div id="ss10">Customer Service</div>
-		<div id="ss11">Prime</div>
-		<div id="ss12">Amazom Pay</div>
-		<div id="ss13">New Releas</div>
-		<div id="ss14">Fashion</div>
-		<div id="ss15">Car & Motorbike</div>
-		<div id="ss16">computer</div>
+    <!-- =========================================
+         AMAZON TOP HEADER
+    ========================================= -->
+
+    <header id="bod1">
+
+        <img src="Image/Amazon.png" alt="Amazon" id="Amazom">
+
+        <img src="Image/add.png" alt="Location" id="add">
+
+        <div id="sel1">
+
+            <select>
+                <option>All</option>
+                <option>Alexa Skills</option>
+                <option>Amazon Devices</option>
+                <option>Amazon Fashion</option>
+                <option>Amazon Fresh</option>
+                <option>Amazon Pharmacy</option>
+                <option>Apps & Games</option>
+                <option>Baby</option>
+                <option>Beauty</option>
+                <option>Books</option>
+                <option>Car & Motorbike</option>
+                <option>Computers</option>
+                <option>Deals</option>
+                <option>Electronics</option>
+                <option>Furniture</option>
+                <option>Garden & Outdoors</option>
+            </select>
+
+            <input
+                type="text"
+                name="txt1"
+                placeholder="Search Amazon.in"
+                id="in1"
+            >
+
+            <img src="Image/sec.png" id="im2" alt="Search">
+
         </div>
-	</nav>
-</div>
 
-<section>
-    <img style="width:102%;margin-left:-10px;" src="Image/ktmwal.jpg">
-</section>
+        <img src="Image/lan.png" alt="Language" id="lan">
+        <img src="Image/acc.png" alt="Account" id="acc">
+        <img src="Image/ord.png" alt="Orders" id="ord">
+        <img src="Image/cart.png" alt="Cart" id="cart">
 
-<div class="product-grid">
-
-  <div class="product-card">
-  <img src="Image/duke (1).jpg" class="product-img">
-  <h3 class="product-title">KTM Duke 200</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,03,412</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (1).webp" class="product-img">
-  <h3 class="product-title">KTM Duke 200</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,03,412</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (2).webp" class="product-img">
-  <h3 class="product-title">KTM Duke 200</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,03,412</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (3).webp" class="product-img">
-  <h3 class="product-title">KTM Duke 390</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,13,923</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (4).webp" class="product-img">
-  <h3 class="product-title">KTM Duke 390</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,13,923</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (5).webp" class="product-img">
-  <h3 class="product-title">KTM RC 200</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,18,850</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (6).webp" class="product-img">
-  <h3 class="product-title">KTM RC 200</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,18,850</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (7).webp" class="product-img">
-  <h3 class="product-title">KTM RC 390</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,21,173</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (8).webp" class="product-img">
-  <h3 class="product-title">KTM RC 390</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,21,173</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/duke (1).webp" class="product-img">
-  <h3 class="product-title">KTM Adventure 390</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,39,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
+    </header>
 
 
-</div>
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <nav id="bod2">
+
+        <div id="ss1">☰ All</div>
+        <div id="ss2">Fresh</div>
+        <div id="ss3">MX Player</div>
+        <div id="ss4">Sell</div>
+        <div id="ss5">Best Sellers</div>
+        <div id="ss6">Today's Deals</div>
+        <div id="ss7">Mobiles</div>
+        <div id="ss8">Electronics</div>
+        <div id="ss9">Home & Kitchen</div>
+        <div id="ss10">Customer Service</div>
+        <div id="ss11">Prime</div>
+        <div id="ss12">Amazon Pay</div>
+        <div id="ss13">New Releases</div>
+        <div id="ss14">Fashion</div>
+        <div id="ss15">Car & Motorbike</div>
+        <div id="ss16">Computers</div>
+
+    </nav>
 
 
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <img src="Image/ktmwal.jpg" alt="KTM Bikes">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <small>READY TO RACE</small>
+
+                <h1>
+                    KTM <span>BEASTS</span>
+                </h1>
+
+                <p>
+                    Explore the latest KTM Duke and RC motorcycles.
+                    Experience aggressive styling, powerful performance
+                    and race-inspired engineering.
+                </p>
+
+                <a href="#products" class="hero-btn">
+                    Explore Bikes
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
+    <!-- =========================================
+         PRODUCT SECTION
+    ========================================= -->
+
+    <section id="products">
+
+        <div class="section-heading">
+
+            <h2>
+                KTM <span>Motorcycles</span>
+            </h2>
+
+            <p>
+                Discover our collection of Duke, RC and Adventure models
+            </p>
+
+        </div>
 
 
+        <div class="product-grid">
+
+            <div class="product-card">
+
+                <img src="Image/duke (1).jpg"
+                     class="product-img"
+                     alt="KTM Duke 200">
+
+                <h3 class="product-title">
+                    KTM Duke 200
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,03,412
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
 
 
+            <div class="product-card">
 
-    <section style="border:2px solid #122430;height: 450px; width:1531px;background-color:#122430; color: darkred;margin-left:-10px;">
-	<div id="div1">
-		<p class="fo1">Get to Know Us</p>
-        <p>About Amazon</p>
-        <p>Careers</p>
-        <p>Press Releases</p>
-        <p>Amazon Science</p>
-	</div>
+                <img src="Image/duke (1).webp"
+                     class="product-img"
+                     alt="KTM Duke 200">
 
-	<div id="div2">
-		<p class="fo1">Connect with Us</p>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Instagram</p>
-	</div>
+                <h3 class="product-title">
+                    KTM Duke 200
+                </h3>
 
-	<div id="div3">
-		<p class="fo1">Make Money with Us</p>
-        <p>Sell on Amazon</p>
-        <p>Sell under Amazon Accelerator</p>
-        <p>Protect and Build Your Brand</p>
-        <p>Amazon Global Selling</p>
-        <p>Supply to Amazon</p>
-        <p>Become an Affiliate</p>
-        <p>Fulfilment by Amazon</p>
-        <p>Advertise Your Products</p>
-        <p>Amazon Pay on Merchants</p>
-	</div>
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
 
-	<div id="div4">
-		<p class="fo1">Let Us Help You</p>
-        <p>Your Account</p>
-        <p>Returns Centre</p>
-        <p>Recalls and Product Safety Alerts</p>
-        <p>100% Purchase Protection</p>
-        <p>Amazon App Download</p>
-        <p>Help</p>
-	</div>
-	</section>
-</footer>
+                <p class="price">
+                    ₹2,03,412
+                </p>
 
-<!-- AMAZON BOTTOM FOOTER -->
-<div class="amazon-footer-bottom">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
 
-  <div class="footer-services">
-    <div>
-      <h5>AbeBooks</h5>
-      <p>Books, art<br>& collectibles</p>
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (2).webp"
+                     class="product-img"
+                     alt="KTM Duke 200">
+
+                <h3 class="product-title">
+                    KTM Duke 200
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,03,412
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (3).webp"
+                     class="product-img"
+                     alt="KTM Duke 390">
+
+                <h3 class="product-title">
+                    KTM Duke 390
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹3,13,923
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (4).webp"
+                     class="product-img"
+                     alt="KTM Duke 390">
+
+                <h3 class="product-title">
+                    KTM Duke 390
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹3,13,923
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (5).webp"
+                     class="product-img"
+                     alt="KTM RC 200">
+
+                <h3 class="product-title">
+                    KTM RC 200
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,18,850
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (6).webp"
+                     class="product-img"
+                     alt="KTM RC 200">
+
+                <h3 class="product-title">
+                    KTM RC 200
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,18,850
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (7).webp"
+                     class="product-img"
+                     alt="KTM RC 390">
+
+                <h3 class="product-title">
+                    KTM RC 390
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹3,21,173
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (8).webp"
+                     class="product-img"
+                     alt="KTM RC 390">
+
+                <h3 class="product-title">
+                    KTM RC 390
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹3,21,173
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <img src="Image/duke (1).webp"
+                     class="product-img"
+                     alt="KTM Adventure 390">
+
+                <h3 class="product-title">
+                    KTM Adventure 390
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹3,39,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         KTM BANNER
+    ========================================= -->
+
+    <section class="ktm-banner">
+
+        <div class="ktm-banner-content">
+
+            <h2>
+                RIDE THE <span>BEAST</span>
+            </h2>
+
+            <p>
+                Performance. Technology. Pure KTM attitude.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         WINTER OFFER
+    ========================================= -->
+
+    
+
+
+    <!-- =========================================
+         MAIN FOOTER
+    ========================================= -->
+
+    <footer class="main-footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-column">
+
+                <h3>Get to Know Us</h3>
+
+                <p>About Amazon</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Science</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Connect with Us</h3>
+
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+                <p>YouTube</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <p>Sell on Amazon</p>
+                <p>Sell under Amazon Accelerator</p>
+                <p>Protect and Build Your Brand</p>
+                <p>Amazon Global Selling</p>
+                <p>Become an Affiliate</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Let Us Help You</h3>
+
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Purchase Protection</p>
+                <p>Amazon App Download</p>
+                <p>Help</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-divider"></div>
+
+
+        <div class="footer-brand">
+
+            <img src="Image/Amazon.png" alt="Amazon">
+
+            <p>
+                KTM Motorcycle Store • Built with HTML & CSS
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         AMAZON BOTTOM FOOTER
+    ========================================= -->
+
+    <div class="amazon-footer-bottom">
+
+        <div class="footer-services">
+
+            <div>
+                <h5>AbeBooks</h5>
+                <p>
+                    Books, art<br>
+                    & collectibles
+                </p>
+            </div>
+
+            <div>
+                <h5>Amazon Web Services</h5>
+                <p>
+                    Scalable Cloud<br>
+                    Computing Services
+                </p>
+            </div>
+
+            <div>
+                <h5>Audible</h5>
+                <p>
+                    Download<br>
+                    Audio Books
+                </p>
+            </div>
+
+            <div>
+                <h5>IMDb</h5>
+                <p>
+                    Movies, TV<br>
+                    & Celebrities
+                </p>
+            </div>
+
+            <div>
+                <h5>Shopbop</h5>
+                <p>
+                    Designer<br>
+                    Fashion Brands
+                </p>
+            </div>
+
+            <div>
+                <h5>Amazon Business</h5>
+                <p>
+                    Everything For<br>
+                    Your Business
+                </p>
+            </div>
+
+            <div>
+                <h5>Amazon Prime Music</h5>
+                <p>
+                    100 million songs, ad-free<br>
+                    Over 15 million podcast episodes
+                </p>
+            </div>
+
+            <div>
+                <h5>KTM Store</h5>
+                <p>
+                    Duke • RC<br>
+                    Adventure
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                Conditions of Use & Sale
+            </a>
+
+            <a href="#">
+                Privacy Notice
+            </a>
+
+            <a href="#">
+                Interest-Based Ads
+            </a>
+
+        </div>
+
+
+        <p class="footer-copy">
+            © 2025 Amazon KTM Store. All rights reserved.
+        </p>
+
     </div>
 
-    <div>
-      <h5>Amazon Web Services</h5>
-      <p>Scalable Cloud<br>Computing Services</p>
-    </div>
 
-    <div>
-      <h5>Audible</h5>
-      <p>Download<br>Audio Books</p>
-    </div>
+    <!-- BACK TO TOP -->
 
-    <div>
-      <h5>IMDb</h5>
-      <p>Movies, TV<br>& Celebrities</p>
-    </div>
-
-    <div>
-      <h5>Shopbop</h5>
-      <p>Designer<br>Fashion Brands</p>
-    </div>
-
-    <div>
-      <h5>Amazon Business</h5>
-      <p>Everything For<br>Your Business</p>
-    </div>
-
-    <div>
-      <h5>Amazon Prime Music</h5>
-      <p>100 million songs, ad-free<br>
-         Over 15 million podcast episodes</p>
-    </div>
-  </div>
-
-  <div class="footer-links">
-    <a href="#">Conditions of Use & Sale</a>
-    <a href="#">Privacy Notice</a>
-    <a href="#">Interest-Based Ads</a>
-  </div>
-
-  <p class="footer-copy">
-    © 1996-2025, Amazon.com, Inc. or its affiliates
-  </p>
-
-</div>
-
+    <a href="#" class="back-top">
+        ↑
+    </a>
 
 </body>
 </html>

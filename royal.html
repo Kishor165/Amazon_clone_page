@@ -1,637 +1,2190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Amazom RoyalEnfiled</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon Royal Enfield</title>
+
     <link rel="icon" type="image/png" href="Image/re.png">
-	<style type="text/css">
-		body
-		{
-			background-color: white;
-		}
-		#bod1 {
-			border: 2px solid black;
-			width: 1534px;
-			height: 60px;
-			background-color: #131921;
-			margin-left: -10px;
-			margin-top: -7px;
-			display: inline-block;
-		}
-		#Amazom {
-			width: 150px;
-			height: 50px;
-			margin-top: 4px;
-			margin-left: 5px;
-			display: inline-block;
-		}
-		#Amazom:hover, #add:hover, #lan:hover, #acc:hover, #ord:hover, #cart:hover {
-			border: 2px solid white;
-		}
-		#loca {
-			width: 25px;
-			height: 20px;
-			margin-left: 10px;
-			margin-top: -25px;
-		}
-		#p1 {
-			display: inline-block;
-			color: #EDEADE;
-		}
-		#lan {
-			padding-top: 15px;
-			margin-left: 10px;
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #eaeded;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
 
 
-		}
-		#m1 {
-			margin-left: 80%;
-			display: inline-block;
-			margin-top: -20px;
-		}
-		#cart {
-			display: inline-block;
-		}
+        /* =========================================================
+           TOP HEADER
+        ========================================================= */
 
-		#sel1 
-		 {
-             margin-top: 0; /* Remove the conflicting margin */
-             position: relative;
-             top: -22px; /* Move the select element 10px upwards */
-             display: inline-block;
-         }
-         #in1
-         {
-         	margin-left: -5px;
-         	width: 600px;
-         	height: 35px;
-         }
-         #im2 
-         {
-             position: relative;
-             top: 16.9px; /* Move the image 20px upwards */
-             height: 40.8px;
-             margin-left: -5px;
-         } 
+        .top-header {
+            width: 100%;
+            min-height: 64px;
+            background: #131921;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 12px;
+            color: white;
+        }
 
-         #bod2
-          {
-			border: 2px solid #202d3b;
-			width: 1534px;
-			height: 40px;
-			background-color: #202d3b;
-			margin-left: -10px;
-			margin-top: -7px;			
-		}
-		#ss1,#ss2,#ss3,#ss4,#ss5,#ss6,#ss7,#ss8,#ss9,#ss10,#ss11,#ss12,#ss13,#ss14,#ss15,#ss16
-		{
-			display: inline-block;
-			color: white;
-			padding-right: 20px;
-			margin-top: 15px;
+        .amazon-logo {
+            width: 125px;
+            height: 48px;
+            object-fit: contain;
+            padding: 4px;
+            cursor: pointer;
+        }
 
-		}
-		#ss1{
-			margin-left: 20px;
-		}
-		
-		.fo1
-		{
-			font-size: 20px;
-			font-weight:bold;
-			color: white;
+        .amazon-logo:hover {
+            border: 1px solid white;
+        }
 
-		}
-		#div1
-		{
 
-           margin-top:20px;
-           position: absolute;
-           color: #999999;
-           margin-left: 350px;
-		   font-family: Arial, sans-serif;
-		}
-		#div2
-		{
-            margin-top: 20px;
+        /* LOCATION */
+
+        .location-box {
+            min-width: 120px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding: 4px 7px;
+            cursor: pointer;
+        }
+
+        .location-box:hover {
+            border: 1px solid white;
+        }
+
+        .location-icon {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .location-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .location-text small {
+            color: #ccc;
+            font-size: 11px;
+        }
+
+        .location-text strong {
+            font-size: 13px;
+        }
+
+
+        /* SEARCH */
+
+        .search-box {
+            height: 42px;
+            flex: 1;
+            max-width: 720px;
+            display: flex;
+            border-radius: 5px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .search-category {
+            width: 65px;
+            border: none;
+            background: #f3f3f3;
+            padding: 0 5px;
+            font-size: 12px;
+            color: #333;
+            outline: none;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 0 14px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-button {
+            width: 48px;
+            border: none;
+            background: #febd69;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-button img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .search-button:hover {
+            background: #f3a847;
+        }
+
+
+        /* HEADER ICONS */
+
+        .header-item {
+            min-width: 70px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        .header-item:hover {
+            border: 1px solid white;
+        }
+
+        .header-item img {
+            max-width: 70px;
+            max-height: 43px;
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           SECOND NAVIGATION
+        ========================================================= */
+
+        .navbar {
+            width: 100%;
+            min-height: 42px;
+            background: #232f3e;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            padding: 0 12px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .navbar::-webkit-scrollbar {
+            height: 0;
+        }
+
+        .nav-item {
+            color: white;
+            padding: 11px 13px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            border: 1px solid white;
+            padding: 10px 12px;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
             position: absolute;
-            color: #999999;
-            margin-left: 550px;
-			font-family: Arial, sans-serif;
-		}
-		#div3
-		{
-			margin-top: 20px;
-			position: absolute;
-			color: #999999;
-			margin-left: 750px;
-			font-family: Arial, sans-serif;
-			
+            left: 6%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            max-width: 420px;
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-overlay h1 {
+            font-size: clamp(28px, 4vw, 52px);
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .hero-overlay p {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .hero-button {
+            margin-top: 18px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            background: #ffb400;
+            color: #111;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero-button:hover {
+            background: #ffca28;
+        }
 
 
-		}
-		#div4
-		{
-			font-style:Arial;
-			margin-top: 20px;
-			position: absolute;
-			color: #999999;
-			margin-left: 1020px;
-			font-family: Arial, sans-serif;
+        /* =========================================================
+           SECTION TITLE
+        ========================================================= */
 
-		}
-		.amazon-footer-bottom 
-        {
-  background-color: #131A22;
-  color: #DDDDDD;
-  font-family: Arial, sans-serif;
-  padding: 40px 20px;
-  margin-left:-20px;
-  margin-right: -20px;
-}
+        .section-heading {
+            background: white;
+            margin: 22px 20px 0;
+            padding: 24px 25px 12px;
+            border-radius: 8px 8px 0 0;
+        }
 
-.footer-services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+        .section-heading h2 {
+            font-size: 27px;
+            color: #17202a;
+        }
 
-.footer-services h5 {
-  font-size: 13px;
-  color: #FFFFFF;
-  margin-bottom: 5px;
-}
-
-.footer-services p {
-  font-size: 12px;
-  color: #999999;
-  line-height: 1.4;
-}
-
-.footer-links {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.footer-links a {
-  color: #DDDDDD;
-  font-size: 12px;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-copy {
-  text-align: center;
-  font-size: 12px;
-  color: #999999;
-  margin-top: 10px;
-}
-#t1
-{
-    font-size: 32px;
-    color: orange;
-    background-color: white;
-    font-family: Arial, sans-serif;
-    padding-top:10px;
-}
-#t2
-{
-    font-size: 14px;
-    color: rgb(124, 124, 127);
-    background-color: white;
-    font-family: Arial, sans-serif;
-}
+        .section-heading p {
+            margin-top: 7px;
+            color: #666;
+            font-size: 14px;
+        }
 
 
+        /* =========================================================
+           PRODUCT GRID
+        ========================================================= */
+
+        .product-grid {
+            background: white;
+            margin: 0 20px 25px;
+            padding: 20px 25px 35px;
+
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+
+            gap: 24px;
+        }
 
 
+        /* =========================================================
+           PREMIUM PRODUCT CARD
+        ========================================================= */
+
+        .product-card {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff 0%,
+                    #ffffff 55%,
+                    #f4f4f4 100%
+                );
+
+            border: 1px solid #dedede;
+            border-radius: 16px;
+
+            padding: 12px;
+
+            min-height: 450px;
+
+            display: flex;
+            flex-direction: column;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+        }
 
 
+        /* TOP RED LINE */
+
+        .product-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: linear-gradient(
+                90deg,
+                #b30000,
+                #e31818,
+                #8b0000
+            );
+
+            transform: scaleX(0);
+
+            transform-origin: left;
+
+            transition: transform 0.35s ease;
+        }
 
 
+        /* HOVER */
+
+        .product-card:hover {
+            transform: translateY(-10px);
+
+            border-color: #c9c9c9;
+
+            box-shadow:
+                0 18px 35px rgba(0, 0, 0, 0.16),
+                0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
 
 
+        /* =========================================================
+           BADGE
+        ========================================================= */
 
-.product-card {
-  width: 220px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
+        .product-badge {
+            position: absolute;
 
-.product-img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  cursor: pointer;
-}
+            top: 20px;
+            left: 20px;
 
-.product-title {
-  font-size: 15px;
-  margin: 10px 0;
-  color: #0f1111;
-}
+            z-index: 5;
 
-.rating {
-  color: #ffa41c;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
+            background: linear-gradient(
+                135deg,
+                #b00000,
+                #e31818
+            );
 
-.rating span {
-  color: #007185;
-  margin-left: 5px;
-}
+            color: white;
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #B12704;
-  margin: 8px 0;
-}
+            font-size: 11px;
+            font-weight: bold;
 
-.add-cart {
-  background-color: #ffd814;
-  border: none;
-  padding: 8px;
-  width: 100%;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
+            padding: 7px 12px;
 
-.add-cart:hover {
-  background-color: #f7ca00;
-}
+            border-radius: 20px;
 
-.product-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin-left: 70px;
-   margin-bottom: 50px;
-}
+            text-transform: uppercase;
 
-.product-grid {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+            letter-spacing: 0.5px;
 
-.product-card {
-  width: 280px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.18);
-  font-family: Arial, sans-serif;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.04);
-}
-
-.product-img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  cursor: pointer;
-}
-
-.product-title {
-  font-size: 17px;
-  margin: 12px 0;
-  color: #0f1111;
-}
-
-.rating {
-  color: #ffa41c;
-  font-size: 15px;
-  margin-bottom: 6px;
-}
-
-.rating span {
-  color: #007185;
-  margin-left: 6px;
-}
-
-.price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #B12704;
-  margin: 10px 0;
-}
-
-.add-cart {
-  background-color: #ffd814;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 22px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-}
-
-.add-cart:hover {
-  background-color: #f7ca00;
-}
+            box-shadow:
+                0 4px 10px rgba(180, 0, 0, 0.25);
+        }
 
 
+        /* =========================================================
+           WISHLIST BUTTON
+        ========================================================= */
+
+        .product-card::after {
+            content: "♡";
+
+            position: absolute;
+
+            top: 18px;
+            right: 18px;
+
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            border: 1px solid #ddd;
+
+            border-radius: 50%;
+
+            color: #444;
+
+            font-size: 22px;
+
+            z-index: 5;
+
+            cursor: pointer;
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .product-card:hover::after {
+            color: #d00000;
+
+            border-color: #d00000;
+
+            transform: scale(1.08);
+        }
 
 
+        /* =========================================================
+           PRODUCT IMAGE
+        ========================================================= */
+
+        .product-image-container {
+            width: 100%;
+            height: 235px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #ffffff 0%,
+                    #f7f7f7 55%,
+                    #e9e9e9 100%
+                );
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            border: 1px solid #eeeeee;
+        }
 
 
-	</style>
+        /* IMAGE SHADOW FLOOR */
+
+        .product-image-container::after {
+            content: "";
+
+            position: absolute;
+
+            bottom: 15px;
+
+            left: 15%;
+            right: 15%;
+
+            height: 12px;
+
+            background: rgba(0, 0, 0, 0.12);
+
+            filter: blur(10px);
+
+            border-radius: 50%;
+        }
+
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            padding: 10px;
+
+            position: relative;
+            z-index: 2;
+
+            transition:
+                transform 0.5s cubic-bezier(
+                    0.2,
+                    0.8,
+                    0.2,
+                    1
+                );
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.12);
+        }
+
+
+        /* =========================================================
+           PRODUCT INFO
+        ========================================================= */
+
+        .product-title {
+            font-size: 17px;
+
+            line-height: 1.35;
+
+            color: #17202a;
+
+            margin: 15px 5px 7px;
+
+            min-height: 46px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           RATING
+        ========================================================= */
+
+        .rating {
+            display: inline-flex;
+
+            align-items: center;
+
+            width: fit-content;
+
+            margin: 0 5px 7px;
+
+            color: #f5a623;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            background: #fff8e8;
+
+            padding: 4px 8px;
+
+            border-radius: 5px;
+        }
+
+        .rating span {
+            color: #007185;
+
+            margin-left: 7px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 0;
+        }
+
+
+        /* =========================================================
+           PRICE
+        ========================================================= */
+
+        .price {
+            color: #b12704;
+
+            font-size: 24px;
+
+            font-weight: 700;
+
+            margin: 6px 5px 2px;
+
+            letter-spacing: -0.5px;
+        }
+
+        .price::first-letter {
+            font-size: 18px;
+        }
+
+
+        /* =========================================================
+           DELIVERY
+        ========================================================= */
+
+        .delivery {
+            color: #555;
+
+            font-size: 12px;
+
+            margin: 3px 5px 13px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+        }
+
+        .delivery::before {
+            content: "✓";
+
+            width: 18px;
+            height: 18px;
+
+            display: inline-flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background: #e7f6e7;
+
+            color: #168316;
+
+            border-radius: 50%;
+
+            font-size: 11px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================================
+           ADD TO CART
+        ========================================================= */
+
+        .add-cart {
+            margin-top: auto;
+
+            width: 100%;
+
+            border: 1px solid #e0b400;
+
+            border-radius: 25px;
+
+            padding: 12px 15px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffe580,
+                    #ffd814
+                );
+
+            color: #111;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 3px 7px rgba(0, 0, 0, 0.12);
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .add-cart:hover {
+            background:
+                linear-gradient(
+                    180deg,
+                    #ffdf35,
+                    #f7ca00
+                );
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 6px 12px rgba(0, 0, 0, 0.16);
+        }
+
+        .add-cart:active {
+            transform: translateY(1px);
+        }
+
+
+        /* =========================================================
+           PROMOTIONAL BANNER
+        ========================================================= */
+
+        .promo-banner {
+            margin: 25px 20px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            background: #111;
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .promo-banner img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            max-height: 430px;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.5s ease;
+        }
+
+        .promo-banner:hover img {
+            transform: scale(1.02);
+        }
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        .back-top {
+            width: 100%;
+
+            text-align: center;
+
+            padding: 15px;
+
+            background: #37475a;
+
+            color: white;
+
+            font-size: 13px;
+
+            cursor: pointer;
+
+            transition: background 0.2s ease;
+        }
+
+        .back-top:hover {
+            background: #485769;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer-top {
+            background: #232f3e;
+
+            color: #ddd;
+
+            padding: 45px 8%;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 50px;
+        }
+
+        .footer-column h3 {
+            color: white;
+
+            font-size: 18px;
+
+            margin-bottom: 18px;
+        }
+
+        .footer-column p {
+            color: #ddd;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            cursor: pointer;
+        }
+
+        .footer-column p:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           FOOTER BOTTOM
+        ========================================================= */
+
+        .amazon-footer-bottom {
+            background: #131a22;
+
+            color: #ddd;
+
+            padding: 40px 6% 25px;
+        }
+
+        .footer-services {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 35px 50px;
+        }
+
+        .footer-services h5 {
+            color: white;
+
+            font-size: 13px;
+
+            margin-bottom: 7px;
+        }
+
+        .footer-services p {
+            color: #999;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
+
+        .footer-links {
+            text-align: center;
+
+            margin-top: 40px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #3a4149;
+        }
+
+        .footer-links a {
+            color: #ddd;
+
+            font-size: 12px;
+
+            margin: 0 12px;
+
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copy {
+            text-align: center;
+
+            color: #999;
+
+            font-size: 12px;
+
+            margin-top: 15px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 1200px
+        ========================================================= */
+
+        @media (max-width: 1200px) {
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+            }
+
+            .header-item {
+                min-width: 55px;
+            }
+
+            .location-box {
+                display: none;
+            }
+
+            .footer-services {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 850px
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .top-header {
+                flex-wrap: wrap;
+            }
+
+            .amazon-logo {
+                width: 105px;
+            }
+
+            .search-box {
+                order: 5;
+
+                max-width: 100%;
+
+                width: 100%;
+            }
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                margin-left: 10px;
+                margin-right: 10px;
+
+                padding: 15px;
+            }
+
+            .section-heading {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .promo-banner {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .footer-top {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                padding: 35px 8%;
+            }
+
+            .footer-services {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .hero-overlay {
+                left: 5%;
+            }
+
+            .hero-overlay p {
+                font-size: 14px;
+            }
+
+            .product-image-container {
+                height: 210px;
+            }
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - 550px
+        ========================================================= */
+
+        @media (max-width: 550px) {
+
+            .top-header {
+                gap: 5px;
+            }
+
+            .header-item {
+                min-width: 48px;
+            }
+
+            .header-item img {
+                max-width: 55px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                min-height: 450px;
+            }
+
+            .product-image-container {
+                height: 235px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-services {
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 25px;
+            }
+
+            .hero img {
+                min-height: 230px;
+            }
+
+            .hero-overlay {
+                max-width: 250px;
+            }
+
+            .hero-overlay h1 {
+                font-size: 26px;
+            }
+
+            .hero-overlay p {
+                font-size: 12px;
+            }
+
+            .hero-button {
+                padding: 9px 16px;
+
+                margin-top: 10px;
+            }
+
+            .section-heading h2 {
+                font-size: 22px;
+            }
+        }
+
+    </style>
+
 </head>
-<body tyle="background:lightblue;">
 
-<div>
-	<nav>
-		<div id="bod1">
-			<img src="Image/Amazon.png" alt="Amazom" id="Amazom">
-			<img src="Image/add.png" alt="add" id="add">
-			<div id="sel1"><select style="width: 60px; height: 40px;">
-			<option>All</option>
-			<option>All</option>
-			<option>Alexa Skills</option>
-			<option>Amazon Devices</option>
-			<option>Amazon Fashion</option>
-			<option>Amazon Fresh</option>
-			<option>Amazon Pharmacy</option>
-			<option>Apps & Games</option>
-			<option>Audible Audiobooks</option>
-			<option>Baby</option>
-			<option>Beauty</option>
-			<option>Books</option>
-			<option>Car & Motorbike</option>
-			<option>Computers & Accessories</option>
-			<option>Deals</option>
-			<option>Electronics</option>
-			<option>Furniture</option>
-			<option>Garden & Outdoors</option>
-		    </select>
-		    <input type="text" name="txt1" placeholder=" Search Amazom.in" id="in1">
-		    <img src="Image/sec.png" id="im2" style="margin-top: 0px;">
-		    </div>
-		    <img src="Image/lan.png" alt="lan" id="lan">
-			<img src="Image/acc.png" alt="acc" id="acc">
-			<img src="Image/ord.png" alt="ord" id="ord">
-			<img src="Image/cart.png" alt="cart" id="cart">					
-		</div>
-	</nav>
-</div>
 
-<div>
-	
-		<div id="bod2">
-		<div id="ss1">All</div>
-		<div id="ss2">Fresh</div>
-		<div id="ss3">MX Player</div>
-		<div id="ss4">Sell</div>
-		<div id="ss5">Best Sellers</div>
-		<div id="ss6">Today's Deals</div>
-		<div id="ss7">Mobiles</div>
-		<div id="ss8">Electronics</div>
-		<div id="ss9">Home & Kitchen</div>
-		<div id="ss10">Customer Service</div>
-		<div id="ss11">Prime</div>
-		<div id="ss12">Amazom Pay</div>
-		<div id="ss13">New Releas</div>
-		<div id="ss14">Fashion</div>
-		<div id="ss15">Car & Motorbike</div>
-		<div id="ss16">computer</div>
+<body>
+
+
+    <!-- =========================================================
+         TOP HEADER
+    ========================================================= -->
+
+    <header class="top-header">
+
+        <img src="Image/Amazon.png"
+             alt="Amazon"
+             class="amazon-logo">
+
+
+        <div class="location-box">
+
+            <img src="Image/add.png"
+                 alt="Location"
+                 class="location-icon">
+
+            <div class="location-text">
+
+                <small>Deliver to</small>
+
+                <strong>India</strong>
+
+            </div>
+
         </div>
-	</nav>
-</div>
-
-<section>
-    <img style="width:102%;margin-left:-10px;" src="Image/royal (3).jpg">
-</section>
-
-<div class="product-grid">
-<div class="product-card">
-  <img src="Image/Royal Enfield Meteor 350 (1).jpg" class="product-img">
-  <h3 class="product-title">Royal Enfield Meteor 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,05,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Meteor 350 (1).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Meteor 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,10,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Meteor 350 (2).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Meteor 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,15,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Meteor 350 (3).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Meteor 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,30,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<section>
-    <img style="width:102%;margin-left:-50px;" src="Image/royal (1).jpg">
-</section>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Hunter 350 (1).jpg" class="product-img">
-  <h3 class="product-title">Royal Enfield Hunter 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹1,50,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Hunter 350 (1).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Hunter 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹1,60,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Hunter 350 (2).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Hunter 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹1,70,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Hunter 350 (3).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Hunter 350</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹1,80,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<section>
-    <img style="width:102%;margin-left:-50px;" src="Image/royal (2).jpg">
-</section>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Helmet (1).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Helmet</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹4,500</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Helmet (2).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Helmet</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,500</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Helmet (3).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Helmet</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹3,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/Royal Enfield Helmet (4).webp" class="product-img">
-  <h3 class="product-title">Royal Enfield Helmet</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,500</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
 
 
-</div>
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <select class="search-category">
+
+                <option>All</option>
+                <option>Alexa Skills</option>
+                <option>Amazon Devices</option>
+                <option>Amazon Fashion</option>
+                <option>Amazon Fresh</option>
+                <option>Amazon Pharmacy</option>
+                <option>Apps & Games</option>
+                <option>Baby</option>
+                <option>Beauty</option>
+                <option>Books</option>
+                <option>Car & Motorbike</option>
+                <option>Computers</option>
+                <option>Deals</option>
+                <option>Electronics</option>
+                <option>Furniture</option>
+                <option>Garden & Outdoors</option>
+
+            </select>
+
+
+            <input
+                type="text"
+                class="search-input"
+                placeholder="Search Amazon.in">
+
+
+            <button class="search-button">
+
+                <img src="Image/sec.png"
+                     alt="Search">
+
+            </button>
+
+        </div>
+
+
+        <!-- LANGUAGE -->
+
+        <div class="header-item">
+
+            <img src="Image/lan.png"
+                 alt="Language">
+
+        </div>
+
+
+        <!-- ACCOUNT -->
+
+        <div class="header-item">
+
+            <img src="Image/acc.png"
+                 alt="Account">
+
+        </div>
+
+
+        <!-- ORDERS -->
+
+        <div class="header-item">
+
+            <img src="Image/ord.png"
+                 alt="Orders">
+
+        </div>
+
+
+        <!-- CART -->
+
+        <div class="header-item">
+
+            <img src="Image/cart.png"
+                 alt="Cart">
+
+        </div>
+
+    </header>
 
 
 
+    <!-- =========================================================
+         SECOND NAVIGATION
+    ========================================================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-item">☰ All</div>
+
+        <div class="nav-item">Fresh</div>
+
+        <div class="nav-item">MX Player</div>
+
+        <div class="nav-item">Sell</div>
+
+        <div class="nav-item">Best Sellers</div>
+
+        <div class="nav-item">Today's Deals</div>
+
+        <div class="nav-item">Mobiles</div>
+
+        <div class="nav-item">Electronics</div>
+
+        <div class="nav-item">Home & Kitchen</div>
+
+        <div class="nav-item">Customer Service</div>
+
+        <div class="nav-item">Prime</div>
+
+        <div class="nav-item">Amazon Pay</div>
+
+        <div class="nav-item">New Releases</div>
+
+        <div class="nav-item">Fashion</div>
+
+        <div class="nav-item">Car & Motorbike</div>
+
+        <div class="nav-item">Computers</div>
+
+    </nav>
 
 
 
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+        <img src="Image/royal (3).jpg"
+             alt="Royal Enfield Motorcycles">
+
+
+        <div class="hero-overlay">
+
+            <h1>Royal Enfield</h1>
+
+            <p>
+                Ride with character. Discover iconic Royal Enfield
+                motorcycles and accessories.
+            </p>
+
+            <button class="hero-button">
+                Explore Collection
+            </button>
+
+        </div>
+
+    </section>
 
 
 
-    <section style="border:2px solid #122430;height: 450px; width:1531px;background-color:#122430; color: darkred;margin-left:-10px;">
-	<div id="div1">
-		<p class="fo1">Get to Know Us</p>
-        <p>About Amazon</p>
-        <p>Careers</p>
-        <p>Press Releases</p>
-        <p>Amazon Science</p>
-	</div>
+    <!-- =========================================================
+         METEOR TITLE
+    ========================================================= -->
 
-	<div id="div2">
-		<p class="fo1">Connect with Us</p>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Instagram</p>
-	</div>
+    <div class="section-heading">
 
-	<div id="div3">
-		<p class="fo1">Make Money with Us</p>
-        <p>Sell on Amazon</p>
-        <p>Sell under Amazon Accelerator</p>
-        <p>Protect and Build Your Brand</p>
-        <p>Amazon Global Selling</p>
-        <p>Supply to Amazon</p>
-        <p>Become an Affiliate</p>
-        <p>Fulfilment by Amazon</p>
-        <p>Advertise Your Products</p>
-        <p>Amazon Pay on Merchants</p>
-	</div>
+        <h2>
+            Royal Enfield Meteor 350
+        </h2>
 
-	<div id="div4">
-		<p class="fo1">Let Us Help You</p>
-        <p>Your Account</p>
-        <p>Returns Centre</p>
-        <p>Recalls and Product Safety Alerts</p>
-        <p>100% Purchase Protection</p>
-        <p>Amazon App Download</p>
-        <p>Help</p>
-	</div>
-	</section>
-</footer>
+        <p>
+            Explore the Meteor 350 collection and choose your ride.
+        </p>
 
-<!-- AMAZON BOTTOM FOOTER -->
-<div class="amazon-footer-bottom">
-
-  <div class="footer-services">
-    <div>
-      <h5>AbeBooks</h5>
-      <p>Books, art<br>& collectibles</p>
     </div>
 
-    <div>
-      <h5>Amazon Web Services</h5>
-      <p>Scalable Cloud<br>Computing Services</p>
+
+
+    <!-- =========================================================
+         METEOR PRODUCTS
+    ========================================================= -->
+
+    <div class="product-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="product-card">
+
+            <span class="product-badge">
+                Popular
+            </span>
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Meteor 350 (1).jpg"
+                    class="product-img"
+                    alt="Royal Enfield Meteor 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Meteor 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹2,05,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Meteor 350 (1).webp"
+                    class="product-img"
+                    alt="Royal Enfield Meteor 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Meteor 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹2,10,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Meteor 350 (2).webp"
+                    class="product-img"
+                    alt="Royal Enfield Meteor 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Meteor 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹2,15,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Meteor 350 (3).webp"
+                    class="product-img"
+                    alt="Royal Enfield Meteor 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Meteor 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹2,30,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
     </div>
 
-    <div>
-      <h5>Audible</h5>
-      <p>Download<br>Audio Books</p>
+
+
+    <!-- =========================================================
+         HUNTER BANNER
+    ========================================================= -->
+
+    <section class="promo-banner">
+
+        <img src="Image/royal (1).jpg"
+             alt="Royal Enfield Hunter">
+
+    </section>
+
+
+
+    <!-- =========================================================
+         HUNTER TITLE
+    ========================================================= -->
+
+    <div class="section-heading">
+
+        <h2>
+            Royal Enfield Hunter 350
+        </h2>
+
+        <p>
+            Compact design. Powerful road presence.
+        </p>
+
     </div>
 
-    <div>
-      <h5>IMDb</h5>
-      <p>Movies, TV<br>& Celebrities</p>
+
+
+    <!-- =========================================================
+         HUNTER PRODUCTS
+    ========================================================= -->
+
+    <div class="product-grid">
+
+
+        <!-- CARD 1 -->
+
+        <div class="product-card">
+
+            <span class="product-badge">
+                Deal
+            </span>
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Hunter 350 (1).jpg"
+                    class="product-img"
+                    alt="Royal Enfield Hunter 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Hunter 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹1,50,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Hunter 350 (1).webp"
+                    class="product-img"
+                    alt="Royal Enfield Hunter 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Hunter 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹1,60,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Hunter 350 (2).webp"
+                    class="product-img"
+                    alt="Royal Enfield Hunter 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Hunter 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹1,70,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Hunter 350 (3).webp"
+                    class="product-img"
+                    alt="Royal Enfield Hunter 350">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Hunter 350
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹1,80,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
     </div>
 
-    <div>
-      <h5>Shopbop</h5>
-      <p>Designer<br>Fashion Brands</p>
+
+
+    <!-- =========================================================
+         ACCESSORIES BANNER
+    ========================================================= -->
+
+    <section class="promo-banner">
+
+        <img src="Image/royal (2).jpg"
+             alt="Royal Enfield Accessories">
+
+    </section>
+
+
+
+    <!-- =========================================================
+         HELMET TITLE
+    ========================================================= -->
+
+    <div class="section-heading">
+
+        <h2>
+            Royal Enfield Helmets
+        </h2>
+
+        <p>
+            Complete your riding gear with Royal Enfield helmets.
+        </p>
+
     </div>
 
-    <div>
-      <h5>Amazon Business</h5>
-      <p>Everything For<br>Your Business</p>
+
+
+    <!-- =========================================================
+         HELMET PRODUCTS
+    ========================================================= -->
+
+    <div class="product-grid">
+
+
+        <!-- HELMET 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Helmet (1).webp"
+                    class="product-img"
+                    alt="Royal Enfield Helmet">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Helmet
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹4,500
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- HELMET 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Helmet (2).webp"
+                    class="product-img"
+                    alt="Royal Enfield Helmet">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Helmet
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹3,500
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- HELMET 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Helmet (3).webp"
+                    class="product-img"
+                    alt="Royal Enfield Helmet">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Helmet
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹3,000
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
+
+
+        <!-- HELMET 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image-container">
+
+                <img
+                    src="Image/Royal Enfield Helmet (4).webp"
+                    class="product-img"
+                    alt="Royal Enfield Helmet">
+
+            </div>
+
+
+            <h3 class="product-title">
+                Royal Enfield Helmet
+            </h3>
+
+
+            <div class="rating">
+
+                ★★★★☆
+
+                <span>4.5</span>
+
+            </div>
+
+
+            <p class="price">
+                ₹2,500
+            </p>
+
+
+            <p class="delivery">
+                Free delivery available
+            </p>
+
+
+            <button class="add-cart">
+                Add to Cart
+            </button>
+
+        </div>
+
     </div>
 
-    <div>
-      <h5>Amazon Prime Music</h5>
-      <p>100 million songs, ad-free<br>
-         Over 15 million podcast episodes</p>
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================= -->
+
+    <div class="back-top"
+         onclick="window.scrollTo({top:0, behavior:'smooth'})">
+
+        Back to top
+
     </div>
-  </div>
 
-  <div class="footer-links">
-    <a href="#">Conditions of Use & Sale</a>
-    <a href="#">Privacy Notice</a>
-    <a href="#">Interest-Based Ads</a>
-  </div>
 
-  <p class="footer-copy">
-    © 1996-2025, Amazon.com, Inc. or its affiliates
-  </p>
 
-</div>
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+
+        <section class="footer-top">
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Get to Know Us
+                </h3>
+
+                <p>About Amazon</p>
+
+                <p>Careers</p>
+
+                <p>Press Releases</p>
+
+                <p>Amazon Science</p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Connect with Us
+                </h3>
+
+                <p>Facebook</p>
+
+                <p>Twitter</p>
+
+                <p>Instagram</p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Make Money with Us
+                </h3>
+
+                <p>Sell on Amazon</p>
+
+                <p>
+                    Sell under Amazon Accelerator
+                </p>
+
+                <p>
+                    Protect and Build Your Brand
+                </p>
+
+                <p>
+                    Amazon Global Selling
+                </p>
+
+                <p>
+                    Supply to Amazon
+                </p>
+
+                <p>
+                    Become an Affiliate
+                </p>
+
+                <p>
+                    Fulfilment by Amazon
+                </p>
+
+                <p>
+                    Advertise Your Products
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Let Us Help You
+                </h3>
+
+                <p>Your Account</p>
+
+                <p>Returns Centre</p>
+
+                <p>Product Safety Alerts</p>
+
+                <p>100% Purchase Protection</p>
+
+                <p>Amazon App Download</p>
+
+                <p>Help</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             BOTTOM FOOTER
+        ===================================================== -->
+
+        <div class="amazon-footer-bottom">
+
+
+            <div class="footer-services">
+
+
+                <div>
+
+                    <h5>
+                        AbeBooks
+                    </h5>
+
+                    <p>
+                        Books, art<br>
+                        & collectibles
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h5>
+                        Amazon Web Services
+                    </h5>
+
+                    <p>
+                        Scalable Cloud<br>
+                        Computing Services
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h5>
+                        Audible
+                    </h5>
+
+                    <p>
+                        Download<br>
+                        Audio Books
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h5>
+                        IMDb
+                    </h5>
+
+                    <p>
+                        Movies, TV<br>
+                        & Celebrities
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h5>
+                        Shopbop
+                    </h5>
+
+                    <p>
+                        Designer<br>
+                        Fashion Brands
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h5>
+                        Amazon Business
+                    </h5>
+
+                    <p>
+                        Everything For<br>
+                        Your Business
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h5>
+                        Amazon Prime Music
+                    </h5>
+
+                    <p>
+                        100 million songs, ad-free<br>
+                        Over 15 million podcast episodes
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Conditions of Use & Sale
+                </a>
+
+                <a href="#">
+                    Privacy Notice
+                </a>
+
+                <a href="#">
+                    Interest-Based Ads
+                </a>
+
+            </div>
+
+
+
+            <p class="footer-copy">
+
+                © 1996-2025, Amazon.com, Inc. or its affiliates
+
+            </p>
+
+
+        </div>
+
+    </footer>
 
 
 </body>
+
 </html>

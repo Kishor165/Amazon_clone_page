@@ -243,14 +243,6 @@
 
 		}
 		
-
-
-
-
-
-
-
-
 .winter-button {
     position: relative;
     display: inline-block;
@@ -388,6 +380,149 @@
   color: #999999;
   margin-top: 10px;
 }
+ .winter-button {
+            position: relative;
+            display: block;
+            width: 850px;
+            max-width: 90%;
+            min-height: 130px;
+            margin: 45px auto;
+            padding: 22px 40px;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255,255,255,0.18),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(255,255,255,0.15),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0077b6,
+                    #023e8a,
+                    #03045e
+                );
+
+            color: white;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.25);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .winter-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 80%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.25),
+                transparent
+            );
+
+            transform: skewX(-25deg);
+            transition: left 0.7s ease;
+        }
+
+        .winter-button:hover::before {
+            left: 140%;
+        }
+
+        .winter-button:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,0.35),
+                0 0 25px rgba(0,183,255,0.35);
+        }
+
+        .button-content {
+            position: relative;
+            z-index: 2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+        }
+
+        .discount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+
+            font-size: 46px;
+            font-weight: 900;
+
+            color: #ffe600;
+            letter-spacing: 1px;
+
+            text-shadow:
+                2px 2px 0 #111,
+                0 0 12px rgba(255,230,0,0.4);
+        }
+
+        .offer-text {
+            font-size: 17px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: white;
+        }
+
+        .snowflake {
+            display: inline-block;
+            font-size: 28px;
+
+            animation:
+                snowRotate 4s linear infinite,
+                snowFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes snowRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes snowFloat {
+            0%, 100% {
+                margin-top: 0;
+            }
+
+            50% {
+                margin-top: -7px;
+            }
+        }
+
 
 
 
@@ -700,17 +835,26 @@ function sideScroll(direction) {
 
 
 <a href="next.html" class="winter-button">
-    <div class="button-content">
-        <div class="discount">
-            <span class="snowflake">❄️</span>
-            70% OFF
-            <span class="snowflake">❄️</span>
+
+        <div class="button-content">
+
+            <div class="discount">
+
+                <span class="snowflake">❄️</span>
+
+                70% OFF
+
+                <span class="snowflake">❄️</span>
+
+            </div>
+
+            <div class="offer-text">
+                Claim Winter Festival Offer
+            </div>
+
         </div>
-        <div class="offer-text">
-            Claim Winter Festival Offer
-        </div>
-    </div>
-</a>
+
+    </a>
 
 
 <footer>

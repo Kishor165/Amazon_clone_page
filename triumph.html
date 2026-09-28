@@ -1,638 +1,1719 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Amazom Triumph</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazon Triumph | Triumph Motorcycles</title>
+
     <link rel="icon" type="image/png" href="Image/triumpgioc.avif">
-	<style type="text/css">
-		body
-		{
-			background-color: white;
-		}
-		#bod1 {
-			border: 2px solid black;
-			width: 1534px;
-			height: 60px;
-			background-color: #131921;
-			margin-left: -10px;
-			margin-top: -7px;
-			display: inline-block;
-		}
-		#Amazom {
-			width: 150px;
-			height: 50px;
-			margin-top: 4px;
-			margin-left: 5px;
-			display: inline-block;
-		}
-		#Amazom:hover, #add:hover, #lan:hover, #acc:hover, #ord:hover, #cart:hover {
-			border: 2px solid white;
-		}
-		#loca {
-			width: 25px;
-			height: 20px;
-			margin-left: 10px;
-			margin-top: -25px;
-		}
-		#p1 {
-			display: inline-block;
-			color: #EDEADE;
-		}
-		#lan {
-			padding-top: 15px;
-			margin-left: 10px;
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		}
-		#m1 {
-			margin-left: 80%;
-			display: inline-block;
-			margin-top: -20px;
-		}
-		#cart {
-			display: inline-block;
-		}
+        html {
+            scroll-behavior: smooth;
+        }
 
-		#sel1 
-		 {
-             margin-top: 0; /* Remove the conflicting margin */
-             position: relative;
-             top: -22px; /* Move the select element 10px upwards */
-             display: inline-block;
-         }
-         #in1
-         {
-         	margin-left: -5px;
-         	width: 600px;
-         	height: 35px;
-         }
-         #im2 
-         {
-             position: relative;
-             top: 16.9px; /* Move the image 20px upwards */
-             height: 40.8px;
-             margin-left: -5px;
-         } 
+        body {
+            background: #eaeded;
+            color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-         #bod2
-          {
-			border: 2px solid #202d3b;
-			width: 1534px;
-			height: 40px;
-			background-color: #202d3b;
-			margin-left: -10px;
-			margin-top: -7px;			
-		}
-		#ss1,#ss2,#ss3,#ss4,#ss5,#ss6,#ss7,#ss8,#ss9,#ss10,#ss11,#ss12,#ss13,#ss14,#ss15,#ss16
-		{
-			display: inline-block;
-			color: white;
-			padding-right: 20px;
-			margin-top: 15px;
+        /* =====================================================
+           AMAZON HEADER
+        ===================================================== */
 
-		}
-		#ss1{
-			margin-left: 20px;
-		}
-		
-		.fo1
-		{
-			font-size: 20px;
-			font-weight:bold;
-			color: white;
+        #bod1 {
+            width: 100%;
+            min-height: 70px;
+            background: #131921;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 18px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        }
 
-		}
-		#div1
-		{
+        #Amazom {
+            width: 135px;
+            height: 48px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
 
-           margin-top:20px;
-           position: absolute;
-           color: #999999;
-           margin-left: 350px;
-		   font-family: Arial, sans-serif;
-		}
-		#div2
-		{
-            margin-top: 20px;
+        #Amazom:hover,
+        #add:hover,
+        #lan:hover,
+        #acc:hover,
+        #ord:hover,
+        #cart:hover {
+            border: 1px solid white;
+        }
+
+        #add {
+            width: 100px;
+            height: 48px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           SEARCH
+        ===================================================== */
+
+        #sel1 {
+            display: flex;
+            height: 42px;
+            flex: 1;
+            max-width: 680px;
+        }
+
+        #sel1 select {
+            width: 65px;
+            height: 42px;
+            border: none;
+            background: #e6e6e6;
+            padding: 0 6px;
+            cursor: pointer;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #in1 {
+            flex: 1;
+            height: 42px;
+            border: none;
+            outline: none;
+            padding: 0 15px;
+            font-size: 15px;
+        }
+
+        #im2 {
+            width: 48px;
+            height: 42px;
+            object-fit: contain;
+            background: #febd69;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #im2:hover {
+            background: #f3a847;
+        }
+
+        #lan {
+            width: 65px;
+            height: 42px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #acc {
+            width: 85px;
+            height: 45px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #ord {
+            width: 80px;
+            height: 45px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #cart {
+            width: 65px;
+            height: 48px;
+            object-fit: contain;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           SECOND NAVIGATION
+        ===================================================== */
+
+        #bod2 {
+            width: 100%;
+            min-height: 46px;
+            background: #232f3e;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 0 18px;
+            overflow-x: auto;
+            white-space: nowrap;
+            position: sticky;
+            top: 70px;
+            z-index: 999;
+        }
+
+        #bod2::-webkit-scrollbar {
+            height: 3px;
+        }
+
+        #bod2::-webkit-scrollbar-thumb {
+            background: #777;
+        }
+
+        #bod2 div {
+            color: white;
+            padding: 12px 13px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: 0.2s;
+        }
+
+        #bod2 div:hover {
+            border: 1px solid white;
+        }
+
+        #ss1 {
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 470px;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .hero > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
             position: absolute;
-            color: #999999;
-            margin-left: 550px;
-			font-family: Arial, sans-serif;
-		}
-		#div3
-		{
-			margin-top: 20px;
-			position: absolute;
-			color: #999999;
-			margin-left: 750px;
-			font-family: Arial, sans-serif;
-			
+            inset: 0;
 
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.86) 0%,
+                    rgba(0,0,0,0.62) 35%,
+                    rgba(0,0,0,0.18) 70%,
+                    rgba(0,0,0,0.02) 100%
+                );
 
-		}
-		#div4
-		{
-			font-style:Arial;
-			margin-top: 20px;
-			position: absolute;
-			color: #999999;
-			margin-left: 1020px;
-			font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            padding-left: 8%;
+        }
 
-		}
-		.amazon-footer-bottom 
-        {
-  background-color: #131A22;
-  color: #DDDDDD;
-  font-family: Arial, sans-serif;
-  padding: 40px 20px;
-  margin-left:-20px;
-  margin-right: -20px;
-}
+        .hero-content {
+            max-width: 550px;
+            color: white;
+        }
 
-.footer-services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
+        .hero-tag {
+            display: inline-block;
+            border-left: 4px solid #e21b2d;
+            padding-left: 12px;
+            color: #ddd;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
 
-.footer-services h5 {
-  font-size: 13px;
-  color: #FFFFFF;
-  margin-bottom: 5px;
-}
+        .hero-content h1 {
+            font-size: 58px;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
 
-.footer-services p {
-  font-size: 12px;
-  color: #999999;
-  line-height: 1.4;
-}
+        .hero-content h1 span {
+            color: #e21b2d;
+        }
 
-.footer-links {
-  text-align: center;
-  margin-top: 30px;
-}
+        .hero-content p {
+            color: #ddd;
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
 
-.footer-links a {
-  color: #DDDDDD;
-  font-size: 12px;
-  margin: 0 10px;
-  text-decoration: none;
-}
+        .hero-btn {
+            display: inline-block;
+            background: #e21b2d;
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
+        .hero-btn:hover {
+            background: #b91221;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(226,27,45,0.4);
+        }
 
-.footer-copy {
-  text-align: center;
-  font-size: 12px;
-  color: #999999;
-  margin-top: 10px;
-}
-#t1
-{
-    font-size: 32px;
-    color: orange;
-    background-color: white;
-    font-family: Arial, sans-serif;
-    padding-top:10px;
-}
-#t2
-{
-    font-size: 14px;
-    color: rgb(124, 124, 127);
-    background-color: white;
-    font-family: Arial, sans-serif;
-}
+        /* =====================================================
+           SECTION TITLE
+        ===================================================== */
 
+        .section-heading {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
 
+        .section-heading .line {
+            width: 55px;
+            height: 4px;
+            background: #e21b2d;
+            margin: 0 auto 15px;
+        }
 
+        .section-heading h2 {
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
+        .section-heading h2 span {
+            color: #e21b2d;
+        }
 
+        .section-heading p {
+            color: #777;
+            margin-top: 9px;
+            font-size: 14px;
+        }
 
+        /* =====================================================
+           PRODUCTS
+        ===================================================== */
 
+        .product-grid {
+            width: 94%;
+            max-width: 1400px;
+            margin: 15px auto 60px;
 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
 
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
 
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
 
-.product-card {
-  width: 220px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
 
-.product-img {
-  width: 100%;
-  height: 150px;
-  object-fit: contain;
-  cursor: pointer;
-}
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
 
-.product-title {
-  font-size: 15px;
-  margin: 10px 0;
-  color: #0f1111;
-}
+        .product-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: #e21b2d;
+            transition: width 0.3s ease;
+        }
 
-.rating {
-  color: #ffa41c;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
+        .product-card:hover::after {
+            width: 100%;
+        }
 
-.rating span {
-  color: #007185;
-  margin-left: 5px;
-}
+        .bike-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #111;
+            color: white;
+            padding: 5px 9px;
+            font-size: 10px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
 
-.price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #B12704;
-  margin: 8px 0;
-}
+        .product-img {
+            width: 100%;
+            height: 210px;
+            object-fit: contain;
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
 
-.add-cart {
-  background-color: #ffd814;
-  border: none;
-  padding: 8px;
-  width: 100%;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
+        .product-card:hover .product-img {
+            transform: scale(1.07);
+        }
 
-.add-cart:hover {
-  background-color: #f7ca00;
-}
+        .product-title {
+            font-size: 17px;
+            margin: 15px 0 8px;
+            color: #111;
+        }
 
-.product-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin-left: 70px;
-   margin-bottom: 50px;
-}
+        .rating {
+            color: #ffa41c;
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
 
-.product-grid {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-}
+        .rating span {
+            color: #007185;
+            font-size: 13px;
+            margin-left: 5px;
+        }
 
-.product-card {
-  width: 280px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.18);
-  font-family: Arial, sans-serif;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+        .price {
+            color: #b12704;
+            font-size: 21px;
+            font-weight: bold;
+            margin: 10px 0 16px;
+        }
 
-.product-card:hover {
-  transform: scale(1.04);
-}
+        .add-cart {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 4px;
 
-.product-img {
-  width: 100%;
-  height: 200px;
-  object-fit: contain;
-  cursor: pointer;
-}
+            background: #111;
+            color: white;
 
-.product-title {
-  font-size: 17px;
-  margin: 12px 0;
-  color: #0f1111;
-}
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
 
-.rating {
-  color: #ffa41c;
-  font-size: 15px;
-  margin-bottom: 6px;
-}
+            transition: 0.3s;
+        }
 
-.rating span {
-  color: #007185;
-  margin-left: 6px;
-}
+        .add-cart:hover {
+            background: #e21b2d;
+            transform: translateY(-2px);
+        }
 
-.price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #B12704;
-  margin: 10px 0;
-}
+        /* =====================================================
+           TRIUMPH BANNER
+        ===================================================== */
 
-.add-cart {
-  background-color: #ffd814;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 22px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-}
+        .triumph-banner {
+            width: 94%;
+            max-width: 1400px;
+            min-height: 210px;
+            margin: 0 auto 60px;
 
-.add-cart:hover {
-  background-color: #f7ca00;
-}
+            border-radius: 12px;
+            overflow: hidden;
 
+            position: relative;
 
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.92),
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.15)
+                ),
+                url("Image/triu.jpg") center/cover;
+        }
 
+        .triumph-banner-content {
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
 
+        .triumph-banner-content h2 {
+            font-size: 34px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
 
+        .triumph-banner-content h2 span {
+            color: #e21b2d;
+        }
 
-	</style>
+        .triumph-banner-content p {
+            color: #ddd;
+            font-size: 15px;
+        }
+
+        /* =====================================================
+           SPECIAL OFFER
+        ===================================================== */
+
+        .winter-button {
+            position: relative;
+            display: block;
+
+            width: 850px;
+            max-width: 90%;
+            min-height: 150px;
+
+            margin: 45px auto;
+            padding: 22px 40px;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(255,255,255,0.18),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(255,255,255,0.15),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0077b6,
+                    #023e8a,
+                    #03045e
+                );
+
+            color: white;
+            text-decoration: none;
+
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 20px;
+
+            overflow: hidden;
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.25);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .winter-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+
+            width: 80%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.25),
+                transparent
+            );
+
+            transform: skewX(-25deg);
+            transition: left 0.7s ease;
+        }
+
+        .winter-button:hover::before {
+            left: 140%;
+        }
+
+        .winter-button:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,0.35),
+                0 0 25px rgba(0,183,255,0.35);
+        }
+
+        .button-content {
+            position: relative;
+            z-index: 2;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+        }
+
+        .discount {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+
+            font-size: 46px;
+            font-weight: 900;
+
+            color: #ffe600;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                2px 2px 0 #111,
+                0 0 12px rgba(255,230,0,0.4);
+        }
+
+        .offer-text {
+            font-size: 17px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: white;
+        }
+
+        .snowflake {
+            display: inline-block;
+            font-size: 28px;
+
+            animation:
+                snowRotate 4s linear infinite,
+                snowFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes snowRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes snowFloat {
+            0%, 100% {
+                margin-top: 0;
+            }
+
+            50% {
+                margin-top: -7px;
+            }
+        }
+
+        /* =====================================================
+           MAIN FOOTER
+        ===================================================== */
+
+        .main-footer {
+            background: #131a22;
+            color: #ddd;
+            padding: 55px 8% 35px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
+
+        .footer-column p {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .footer-column p:hover {
+            color: white;
+            padding-left: 4px;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: #39434f;
+            margin: 40px 0 25px;
+        }
+
+        .footer-brand {
+            text-align: center;
+        }
+
+        .footer-brand img {
+            width: 130px;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            color: #777;
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           AMAZON BOTTOM FOOTER
+        ===================================================== */
+
+        .amazon-footer-bottom {
+            background: #0d1117;
+            color: #ddd;
+            padding: 40px 7%;
+        }
+
+        .footer-services {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-services h5 {
+            color: white;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .footer-services p {
+            color: #888;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            font-size: 12px;
+            margin: 0 12px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-copy {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        /* =====================================================
+           BACK TO TOP
+        ===================================================== */
+
+        .back-top {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: #e21b2d;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: bold;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.35);
+
+            z-index: 999;
+
+            transition: 0.3s;
+        }
+
+        .back-top:hover {
+            transform: translateY(-5px);
+            background: #b91221;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1200px) {
+
+            #add,
+            #lan,
+            #acc,
+            #ord {
+                display: none;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            #bod1 {
+                min-height: 65px;
+            }
+
+            #Amazom {
+                width: 105px;
+            }
+
+            #sel1 {
+                max-width: none;
+            }
+
+            #bod2 {
+                top: 65px;
+            }
+
+            .hero {
+                height: 380px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            #bod1 {
+                position: relative;
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            #Amazom {
+                width: 100px;
+            }
+
+            #cart {
+                width: 50px;
+            }
+
+            #sel1 {
+                order: 2;
+                flex-basis: 100%;
+                width: 100%;
+            }
+
+            #bod2 {
+                position: relative;
+                top: 0;
+            }
+
+            .hero {
+                height: 320px;
+            }
+
+            .hero-overlay {
+                padding: 25px;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .hero-content p {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            .hero-tag {
+                font-size: 10px;
+            }
+
+            .product-grid {
+                width: 92%;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .product-card {
+                padding: 12px;
+            }
+
+            .product-img {
+                height: 145px;
+            }
+
+            .product-title {
+                font-size: 14px;
+            }
+
+            .rating {
+                font-size: 13px;
+            }
+
+            .price {
+                font-size: 17px;
+            }
+
+            .add-cart {
+                font-size: 12px;
+                padding: 9px;
+            }
+
+            .triumph-banner {
+                min-height: 160px;
+            }
+
+            .triumph-banner-content {
+                left: 25px;
+            }
+
+            .triumph-banner-content h2 {
+                font-size: 23px;
+            }
+
+            .triumph-banner-content p {
+                font-size: 12px;
+            }
+
+            .winter-button {
+                width: 94%;
+                min-height: 125px;
+                margin: 30px auto;
+                padding: 15px;
+                border-radius: 15px;
+            }
+
+            .discount {
+                font-size: 27px;
+                gap: 8px;
+            }
+
+            .offer-text {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            .snowflake {
+                font-size: 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-services {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-img {
+                height: 190px;
+            }
+
+            .footer-grid,
+            .footer-services {
+                grid-template-columns: 1fr;
+            }
+
+            .discount {
+                font-size: 23px;
+            }
+        }
+    </style>
 </head>
-<body tyle="background:lightblue;">
 
-<div>
-	<nav>
-		<div id="bod1">
-			<img src="Image/Amazon.png" alt="Amazom" id="Amazom">
-			<img src="Image/add.png" alt="add" id="add">
-			<div id="sel1"><select style="width: 60px; height: 40px;">
-			<option>All</option>
-			<option>All</option>
-			<option>Alexa Skills</option>
-			<option>Amazon Devices</option>
-			<option>Amazon Fashion</option>
-			<option>Amazon Fresh</option>
-			<option>Amazon Pharmacy</option>
-			<option>Apps & Games</option>
-			<option>Audible Audiobooks</option>
-			<option>Baby</option>
-			<option>Beauty</option>
-			<option>Books</option>
-			<option>Car & Motorbike</option>
-			<option>Computers & Accessories</option>
-			<option>Deals</option>
-			<option>Electronics</option>
-			<option>Furniture</option>
-			<option>Garden & Outdoors</option>
-		    </select>
-		    <input type="text" name="txt1" placeholder=" Search Amazom.in" id="in1">
-		    <img src="Image/sec.png" id="im2" style="margin-top: 0px;">
-		    </div>
-		    <img src="Image/lan.png" alt="lan" id="lan">
-			<img src="Image/acc.png" alt="acc" id="acc">
-			<img src="Image/ord.png" alt="ord" id="ord">
-			<img src="Image/cart.png" alt="cart" id="cart">					
-		</div>
-	</nav>
-</div>
+<body>
 
-<div>
-	
-		<div id="bod2">
-		<div id="ss1">All</div>
-		<div id="ss2">Fresh</div>
-		<div id="ss3">MX Player</div>
-		<div id="ss4">Sell</div>
-		<div id="ss5">Best Sellers</div>
-		<div id="ss6">Today's Deals</div>
-		<div id="ss7">Mobiles</div>
-		<div id="ss8">Electronics</div>
-		<div id="ss9">Home & Kitchen</div>
-		<div id="ss10">Customer Service</div>
-		<div id="ss11">Prime</div>
-		<div id="ss12">Amazom Pay</div>
-		<div id="ss13">New Releas</div>
-		<div id="ss14">Fashion</div>
-		<div id="ss15">Car & Motorbike</div>
-		<div id="ss16">computer</div>
+    <!-- =====================================================
+         AMAZON HEADER
+    ===================================================== -->
+
+    <header id="bod1">
+
+        <img src="Image/Amazon.png"
+             alt="Amazon"
+             id="Amazom">
+
+        <img src="Image/add.png"
+             alt="Location"
+             id="add">
+
+        <div id="sel1">
+
+            <select>
+                <option>All</option>
+                <option>Alexa Skills</option>
+                <option>Amazon Devices</option>
+                <option>Amazon Fashion</option>
+                <option>Amazon Fresh</option>
+                <option>Amazon Pharmacy</option>
+                <option>Apps & Games</option>
+                <option>Baby</option>
+                <option>Beauty</option>
+                <option>Books</option>
+                <option>Car & Motorbike</option>
+                <option>Computers & Accessories</option>
+                <option>Deals</option>
+                <option>Electronics</option>
+                <option>Furniture</option>
+                <option>Garden & Outdoors</option>
+            </select>
+
+            <input
+                type="text"
+                name="txt1"
+                placeholder="Search Amazon.in"
+                id="in1"
+            >
+
+            <img src="Image/sec.png"
+                 id="im2"
+                 alt="Search">
+
         </div>
-	</nav>
-</div>
 
-<section>
-    <img style="width:102%;margin-left:-10px;" src="Image/triu.jpg">
-</section>
+        <img src="Image/lan.png"
+             alt="Language"
+             id="lan">
 
-<div class="product-grid">
-<div class="product-card">
-  <img src="Image/scrambler (1).jpg" class="product-img">
-  <h3 class="product-title">Triumph Scrambler 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
+        <img src="Image/acc.png"
+             alt="Account"
+             id="acc">
 
-<div class="product-card">
-  <img src="Image/scrambler (1).webp" class="product-img">
-  <h3 class="product-title">Triumph Scrambler 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
+        <img src="Image/ord.png"
+             alt="Orders"
+             id="ord">
 
-<div class="product-card">
-  <img src="Image/scrambler (2).jpg" class="product-img">
-  <h3 class="product-title">Triumph Scrambler 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
+        <img src="Image/cart.png"
+             alt="Cart"
+             id="cart">
 
-<div class="product-card">
-  <img src="Image/scrambler (3).jpg" class="product-img">
-  <h3 class="product-title">Triumph Scrambler 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,45,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/scrambler (4).jpg" class="product-img">
-  <h3 class="product-title">Triumph Scrambler 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,45,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/T4 (1).jpg" class="product-img">
-  <h3 class="product-title">Triumph T4</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,30,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/T4 (1).webp" class="product-img">
-  <h3 class="product-title">Triumph T4</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,55,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/T4 (2).webp" class="product-img">
-  <h3 class="product-title">Triumph T4</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,55,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/T4 (3).webp" class="product-img">
-  <h3 class="product-title">Triumph T4</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,70,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/speed (1).jpg" class="product-img">
-  <h3 class="product-title">Triumph Speed 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/speed (1).webp" class="product-img">
-  <h3 class="product-title">Triumph Speed 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/speed (2).webp" class="product-img">
-  <h3 class="product-title">Triumph Speed 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="Image/speed (3).webp" class="product-img">
-  <h3 class="product-title">Triumph Speed 400</h3>
-  <div class="rating">★★★★☆ <span>4.5</span></div>
-  <p class="price">₹2,33,000</p>
-  <button class="add-cart">Add to Cart</button>
-</div>
+    </header>
 
 
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
 
-</div>
+    <nav id="bod2">
+
+        <div id="ss1">☰ All</div>
+        <div id="ss2">Fresh</div>
+        <div id="ss3">MX Player</div>
+        <div id="ss4">Sell</div>
+        <div id="ss5">Best Sellers</div>
+        <div id="ss6">Today's Deals</div>
+        <div id="ss7">Mobiles</div>
+        <div id="ss8">Electronics</div>
+        <div id="ss9">Home & Kitchen</div>
+        <div id="ss10">Customer Service</div>
+        <div id="ss11">Prime</div>
+        <div id="ss12">Amazon Pay</div>
+        <div id="ss13">New Releases</div>
+        <div id="ss14">Fashion</div>
+        <div id="ss15">Car & Motorbike</div>
+        <div id="ss16">Computers</div>
+
+    </nav>
 
 
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <img src="Image/triu.jpg"
+             alt="Triumph Motorcycle">
+
+        <div class="hero-overlay">
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    British Engineering
+                </div>
+
+                <h1>
+                    Triumph<br>
+                    <span>Motorcycles</span>
+                </h1>
+
+                <p>
+                    Discover the latest Triumph motorcycles built
+                    for performance, style and unforgettable rides.
+                </p>
+
+                <a href="#products" class="hero-btn">
+                    Explore Collection
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
+    <!-- =====================================================
+         PRODUCTS
+    ===================================================== -->
+
+    <section id="products">
+
+        <div class="section-heading">
+
+            <div class="line"></div>
+
+            <h2>
+                Triumph <span>Collection</span>
+            </h2>
+
+            <p>
+                Explore Scrambler, T4 and Speed 400 motorcycles
+            </p>
+
+        </div>
 
 
+        <div class="product-grid">
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/scrambler (1).jpg"
+                     class="product-img"
+                     alt="Triumph Scrambler 400">
+
+                <h3 class="product-title">
+                    Triumph Scrambler 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,33,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
 
 
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
 
-    <section style="border:2px solid #122430;height: 450px; width:1531px;background-color:#122430; color: darkred;margin-left:-10px;">
-	<div id="div1">
-		<p class="fo1">Get to Know Us</p>
-        <p>About Amazon</p>
-        <p>Careers</p>
-        <p>Press Releases</p>
-        <p>Amazon Science</p>
-	</div>
+                <img src="Image/scrambler (1).webp"
+                     class="product-img"
+                     alt="Triumph Scrambler 400">
 
-	<div id="div2">
-		<p class="fo1">Connect with Us</p>
-        <p>Facebook</p>
-        <p>Twitter</p>
-        <p>Instagram</p>
-	</div>
+                <h3 class="product-title">
+                    Triumph Scrambler 400
+                </h3>
 
-	<div id="div3">
-		<p class="fo1">Make Money with Us</p>
-        <p>Sell on Amazon</p>
-        <p>Sell under Amazon Accelerator</p>
-        <p>Protect and Build Your Brand</p>
-        <p>Amazon Global Selling</p>
-        <p>Supply to Amazon</p>
-        <p>Become an Affiliate</p>
-        <p>Fulfilment by Amazon</p>
-        <p>Advertise Your Products</p>
-        <p>Amazon Pay on Merchants</p>
-	</div>
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
 
-	<div id="div4">
-		<p class="fo1">Let Us Help You</p>
-        <p>Your Account</p>
-        <p>Returns Centre</p>
-        <p>Recalls and Product Safety Alerts</p>
-        <p>100% Purchase Protection</p>
-        <p>Amazon App Download</p>
-        <p>Help</p>
-	</div>
-	</section>
-</footer>
+                <p class="price">
+                    ₹2,33,000
+                </p>
 
-<!-- AMAZON BOTTOM FOOTER -->
-<div class="amazon-footer-bottom">
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
 
-  <div class="footer-services">
-    <div>
-      <h5>AbeBooks</h5>
-      <p>Books, art<br>& collectibles</p>
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/scrambler (2).jpg"
+                     class="product-img"
+                     alt="Triumph Scrambler 400">
+
+                <h3 class="product-title">
+                    Triumph Scrambler 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,33,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/scrambler (3).jpg"
+                     class="product-img"
+                     alt="Triumph Scrambler 400">
+
+                <h3 class="product-title">
+                    Triumph Scrambler 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,45,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/scrambler (4).jpg"
+                     class="product-img"
+                     alt="Triumph Scrambler 400">
+
+                <h3 class="product-title">
+                    Triumph Scrambler 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,45,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/T4 (1).jpg"
+                     class="product-img"
+                     alt="Triumph T4">
+
+                <h3 class="product-title">
+                    Triumph T4
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,30,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/T4 (1).webp"
+                     class="product-img"
+                     alt="Triumph T4">
+
+                <h3 class="product-title">
+                    Triumph T4
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,55,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/T4 (2).webp"
+                     class="product-img"
+                     alt="Triumph T4">
+
+                <h3 class="product-title">
+                    Triumph T4
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,55,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/T4 (3).webp"
+                     class="product-img"
+                     alt="Triumph T4">
+
+                <h3 class="product-title">
+                    Triumph T4
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,70,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/speed (1).jpg"
+                     class="product-img"
+                     alt="Triumph Speed 400">
+
+                <h3 class="product-title">
+                    Triumph Speed 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,33,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/speed (1).webp"
+                     class="product-img"
+                     alt="Triumph Speed 400">
+
+                <h3 class="product-title">
+                    Triumph Speed 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,33,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/speed (2).webp"
+                     class="product-img"
+                     alt="Triumph Speed 400">
+
+                <h3 class="product-title">
+                    Triumph Speed 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,33,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product-card">
+                <span class="bike-label">TRIUMPH</span>
+
+                <img src="Image/speed (3).webp"
+                     class="product-img"
+                     alt="Triumph Speed 400">
+
+                <h3 class="product-title">
+                    Triumph Speed 400
+                </h3>
+
+                <div class="rating">
+                    ★★★★☆ <span>4.5</span>
+                </div>
+
+                <p class="price">
+                    ₹2,33,000
+                </p>
+
+                <button class="add-cart">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRIUMPH PROMOTIONAL BANNER
+    ===================================================== -->
+
+    <section class="triumph-banner">
+
+        <div class="triumph-banner-content">
+
+            <h2>
+                FOR THE <span>RIDE</span>
+            </h2>
+
+            <p>
+                Premium engineering. Iconic design. Pure riding experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WINTER OFFER
+    ===================================================== -->
+
+    <a href="next.html" class="winter-button">
+
+        <div class="button-content">
+
+            <div class="discount">
+
+                <span class="snowflake">❄️</span>
+
+                70% OFF
+
+                <span class="snowflake">❄️</span>
+
+            </div>
+
+            <div class="offer-text">
+                Claim Winter Festival Offer
+            </div>
+
+        </div>
+
+    </a>
+
+
+    <!-- =====================================================
+         MAIN FOOTER
+    ===================================================== -->
+
+    <footer class="main-footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-column">
+
+                <h3>Get to Know Us</h3>
+
+                <p>About Amazon</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Science</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Connect with Us</h3>
+
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+                <p>YouTube</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money with Us</h3>
+
+                <p>Sell on Amazon</p>
+                <p>Sell under Amazon Accelerator</p>
+                <p>Protect and Build Your Brand</p>
+                <p>Amazon Global Selling</p>
+                <p>Become an Affiliate</p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Let Us Help You</h3>
+
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Purchase Protection</p>
+                <p>Amazon App Download</p>
+                <p>Help</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-divider"></div>
+
+
+        <div class="footer-brand">
+
+            <img src="Image/Amazon.png"
+                 alt="Amazon">
+
+            <p>
+                Triumph Motorcycle Collection • Built with HTML & CSS
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         BOTTOM FOOTER
+    ===================================================== -->
+
+    <div class="amazon-footer-bottom">
+
+        <div class="footer-services">
+
+            <div>
+                <h5>AbeBooks</h5>
+                <p>
+                    Books, art<br>
+                    & collectibles
+                </p>
+            </div>
+
+            <div>
+                <h5>Amazon Web Services</h5>
+                <p>
+                    Scalable Cloud<br>
+                    Computing Services
+                </p>
+            </div>
+
+            <div>
+                <h5>Audible</h5>
+                <p>
+                    Download<br>
+                    Audio Books
+                </p>
+            </div>
+
+            <div>
+                <h5>IMDb</h5>
+                <p>
+                    Movies, TV<br>
+                    & Celebrities
+                </p>
+            </div>
+
+            <div>
+                <h5>Shopbop</h5>
+                <p>
+                    Designer<br>
+                    Fashion Brands
+                </p>
+            </div>
+
+            <div>
+                <h5>Amazon Business</h5>
+                <p>
+                    Everything For<br>
+                    Your Business
+                </p>
+            </div>
+
+            <div>
+                <h5>Amazon Prime Music</h5>
+                <p>
+                    100 million songs, ad-free<br>
+                    Over 15 million podcast episodes
+                </p>
+            </div>
+
+            <div>
+                <h5>Triumph Collection</h5>
+                <p>
+                    Scrambler • T4<br>
+                    Speed 400
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                Conditions of Use & Sale
+            </a>
+
+            <a href="#">
+                Privacy Notice
+            </a>
+
+            <a href="#">
+                Interest-Based Ads
+            </a>
+
+        </div>
+
+
+        <p class="footer-copy">
+            © 2025 Amazon Triumph Store. All rights reserved.
+        </p>
+
     </div>
 
-    <div>
-      <h5>Amazon Web Services</h5>
-      <p>Scalable Cloud<br>Computing Services</p>
-    </div>
 
-    <div>
-      <h5>Audible</h5>
-      <p>Download<br>Audio Books</p>
-    </div>
+    <!-- BACK TO TOP -->
 
-    <div>
-      <h5>IMDb</h5>
-      <p>Movies, TV<br>& Celebrities</p>
-    </div>
-
-    <div>
-      <h5>Shopbop</h5>
-      <p>Designer<br>Fashion Brands</p>
-    </div>
-
-    <div>
-      <h5>Amazon Business</h5>
-      <p>Everything For<br>Your Business</p>
-    </div>
-
-    <div>
-      <h5>Amazon Prime Music</h5>
-      <p>100 million songs, ad-free<br>
-         Over 15 million podcast episodes</p>
-    </div>
-  </div>
-
-  <div class="footer-links">
-    <a href="#">Conditions of Use & Sale</a>
-    <a href="#">Privacy Notice</a>
-    <a href="#">Interest-Based Ads</a>
-  </div>
-
-  <p class="footer-copy">
-    © 1996-2025, Amazon.com, Inc. or its affiliates
-  </p>
-
-</div>
-
+    <a href="#" class="back-top">
+        ↑
+    </a>
 
 </body>
 </html>
