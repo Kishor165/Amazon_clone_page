@@ -1,7 +1,8 @@
 # 🛒 Amazon Clone Page
 
-A responsive **Amazon-inspired e-commerce website** developed using **HTML and CSS**.
-This project recreates the look and feel of an online shopping platform with product sections, navigation, banners, and multiple product/category pages.
+A responsive **Amazon-inspired e-commerce website** developed using **HTML, CSS, and JavaScript**.
+
+This project recreates the look and feel of an online shopping platform with navigation, product sections, banners, and multiple product/category pages.
 
 ## 🚀 Live Demo
 
@@ -36,9 +37,10 @@ https://kishor165.github.io/Amazon_clone_page/
 
 ## ✨ Features
 
-* Responsive Amazon-inspired user interface
+* Amazon-inspired user interface
+* Responsive webpage design
 * Navigation bar and search section
-* Product/category sections
+* Product and category sections
 * Multiple product pages
 * Interactive page navigation
 * Clean and structured HTML/CSS
@@ -64,7 +66,15 @@ Amazon_clone_page/
 
 ## 🎯 Purpose
 
-This project was created to practice and demonstrate frontend development skills, including webpage structure, responsive layouts, styling, navigation, and UI design.
+This project was created for **study and educational purposes only** to practice and demonstrate frontend development skills, including webpage structure, responsive layouts, styling, navigation, and UI design.
+
+## ⚠️ Disclaimer
+
+This is a **student/learning project** and is intended for **study and educational purposes only**.
+
+This project is **not affiliated with, sponsored by, or officially connected to Amazon**. Amazon and related trademarks, logos, and brand assets belong to their respective owners.
+
+No commercial use is intended.
 
 ## 👨‍💻 Author
 
