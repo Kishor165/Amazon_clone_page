@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Festival</title>
+    <link rel="icon" type="image/png" href="Image/fes.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Navigation */
+        .header-main {
+            background-color: #131921;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .logo:hover, .nav-item:hover {
+            border: 1px solid white;
+            padding: 2px;
+        }
+
+        .address-section {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .location-icon {
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            flex: 1;
+            display: flex;
+            min-width: 200px;
+            max-width: 800px;
+        }
+
+        .search-select {
+            padding: 10px;
+            border: none;
+            background-color: #f3f3f3;
+            border-radius: 4px 0 0 4px;
+            cursor: pointer;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: #febd69;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-icon {
+            height: 20px;
+        }
+
+        /* Navigation Items */
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: auto;
+        }
+
+        .nav-item {
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .nav-item img {
+            height: 35px;
+        }
+
+        /* Secondary Navigation */
+        .nav-secondary {
+            background-color: #232f3e;
+            padding: 10px 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .nav-secondary-items {
+            display: inline-flex;
+            gap:35px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 0;
+            display: inline-block;
+        }
+
+        .nav-link:hover {
+            border: 1px solid white;
+            padding: 4px 8px;
+        }
+
+        /* Main Content */
+        .main-heading {
+            padding: 15px 20px;
+            background-color: white;
+        }
+
+        .main-heading h1 {
+            font-size: 28px;
+            color: #ff9900;
+            margin-bottom: 10px;
+        }
+
+        .main-heading p {
+            font-size: 14px;
+            color: #565959;
+            line-height: 1.5;
+        }
+
+        .main-heading a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        /* Banner Image */
+        .banner-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Scrollable Product Section */
+        .product-slider {
+            background-color: white;
+            padding: 20px 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            gap: 70px;
+            scroll-behavior: smooth;
+        }
+
+        .product-slider::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .product-slider::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .product-slider::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .product-slider img {
+            height: 200px;
+            width: auto;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .product-slider img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Section Heading */
+        .section-heading {
+            width: 100%;
+            padding: 10px 20px;
+        }
+
+        .section-heading img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        .footer-main {
+            background-color: #232f3e;
+            color: #999999;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.8;
+            cursor: pointer;
+        }
+
+        .footer-column p:hover {
+            text-decoration: underline;
+        }
+
+        /* Bottom Footer */
+        .footer-bottom {
+            background-color: #131A22;
+            color: #DDDDDD;
+            padding: 40px 20px;
+        }
+
+        .footer-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .footer-services h5 {
+            font-size: 13px;
+            color: #FFFFFF;
+            margin-bottom: 5px;
+        }
+
+        .footer-services p {
+            font-size: 12px;
+            color: #999999;
+            line-height: 1.4;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #DDDDDD;
+            font-size: 12px;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copy {
+            text-align: center;
+            font-size: 12px;
+            color: #999999;
+            margin-top: 15px;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            
+
+            .logo {
+                height: 30px;
+            }
+
+            .address-section {
+                display: none;
+            }
+
+            .search-container {
+                order: 3;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .search-select {
+                max-width: 60px;
+                font-size: 12px;
+            }
+
+            .nav-items {
+                gap: 10px;
+            }
+
+            .nav-item img {
+                height: 25px;
+            }
+
+           
+
+            .nav-secondary {
+                padding: 8px 10px;
+            }
+
+            .nav-link {
+                font-size: 13px;
+            }
+
+            .main-heading h1 {
+                font-size: 20px;
+            }
+
+            .main-heading p {
+                font-size: 12px;
+            }
+
+            .product-slider img {
+                height: 150px;
+            }
+
+            .footer-columns {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-services {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo {
+                height: 25px;
+            }
+
+            .nav-item img {
+                height: 20px;
+            }
+
+            .search-input {
+                font-size: 12px;
+            }
+
+            .main-heading {
+                padding: 10px 15px;
+            }
+
+            .main-heading h1 {
+                font-size: 18px;
+            }
+
+            .product-slider {
+                padding: 15px 5px;
+                gap: 10px;
+            }
+
+            .product-slider img {
+                height: 120px;
+				
+            }
+
+            .footer-main {
+                padding: 30px 15px;
+            }
+        }
+
+        /* Tablet Optimization */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .search-container {
+                max-width: 500px;
+            }
+
+            .nav-items {
+                gap: 12px;
+            }
+
+            .product-slider img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav class="header-main">
+            <button class="mobile-menu-toggle">☰</button>
+            <img src="Image/Amazon.png" alt="Amazon" class="logo">
+            
+            <div class="address-section">
+                <img src="Image/add.png" alt="Location" class="location-icon">
+            </div>
+
+            <div class="search-container">
+                <select class="search-select">
+                    <option>All</option>
+                    <option>Alexa Skills</option>
+                    <option>Amazon Devices</option>
+                    <option>Amazon Fashion</option>
+                    <option>Amazon Fresh</option>
+                    <option>Apps & Games</option>
+                    <option>Baby</option>
+                    <option>Beauty</option>
+                    <option>Books</option>
+                    <option>Electronics</option>
+                </select>
+                <input type="text" class="search-input" placeholder="Search Amazon.in">
+                <button class="search-button">
+                    <img src="Image/sec.png" alt="Search" class="search-icon">
+                </button>
+            </div>
+
+            <div class="nav-items">
+                <div class="nav-item">
+                    <img src="Image/lan.png" alt="Language">
+                </div>
+                <div class="nav-item">
+                    <img src="Image/acc.png" alt="Account">
+                </div>
+                <div class="nav-item">
+                    <img src="Image/ord.png" alt="Orders">
+                </div>
+                <div class="nav-item">
+                    <img src="Image/cart.png" alt="Cart">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Secondary Navigation -->
+        <nav class="nav-secondary">
+            <div class="nav-secondary-items">
+                <a href="#" class="nav-link">All</a>
+                <a href="#" class="nav-link">Fresh</a>
+                <a href="#" class="nav-link">MX Player</a>
+                <a href="#" class="nav-link">Sell</a>
+                <a href="#" class="nav-link">Best Sellers</a>
+                <a href="#" class="nav-link">Today's Deals</a>
+                <a href="#" class="nav-link">Mobiles</a>
+                <a href="#" class="nav-link">Electronics</a>
+                <a href="#" class="nav-link">Home & Kitchen</a>
+                <a href="#" class="nav-link">Customer Service</a>
+                <a href="#" class="nav-link">Prime</a>
+                <a href="#" class="nav-link">Amazon Pay</a>
+                <a href="#" class="nav-link">Fashion</a>
+                <a href="#" class="nav-link">Car & Motorbike</a>
+                <a href="#" class="nav-link">Computer</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Heading Section -->
+        <section class="main-heading">
+            <h1>Shop for Kitchen, Furniture, Inverter batteries and more from stores nearby</h1>
+            <p>Browse through a wide range of products such as <a href="#">air conditioners, refrigerators, dining tables, inverter batteries, home furnishing, kitchen appliances, fresh flowers</a> and more on Local Shops</p>
+        </section>
+
+        <!-- Banner -->
+        <section>
+            <img src="Image/head.gif" alt="Festival Banner" class="banner-image">
+        </section>
+
+        <section>
+            <img src="Image/far.png" alt="Featured Products" class="banner-image">
+        </section>
+
+        <!-- Product Slider 1 -->
+        <section class="product-slider">
+            <img src="Image/199.gif" alt="Product 199">
+            <img src="Image/299.gif" alt="Product 299">
+            <img src="Image/499.gif" alt="Product 499">
+            <img src="Image/799.gif" alt="Product 799">
+            <img src="Image/999.gif" alt="Product 999">
+            <img src="Image/1499.gif" alt="Product 1499">
+        </section>
+
+        <!-- Section Divider -->
+        <section class="section-heading">
+            <img src="Image/rip.png" alt="Section Divider">
+        </section>
+
+        <!-- Product Slider 2 - Bikes -->
+        <section class="product-slider">
+            <a href="ktm.html"><img src="Image/KTM.jpg" alt="KTM"></a>
+            <a href="triumph.html"><img src="Image/TRIUMPH.jpg" alt="Triumph"></a>
+            <a href="royal.html"><img src="Image/gt.png" alt="Royal Enfield"></a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <section class="footer-main">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Get to Know Us</h3>
+                    <p>About Amazon</p>
+                    <p>Careers</p>
+                    <p>Press Releases</p>
+                    <p>Amazon Science</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Connect with Us</h3>
+                    <p>Facebook</p>
+                    <p>Twitter</p>
+                    <p>Instagram</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Make Money with Us</h3>
+                    <p>Sell on Amazon</p>
+                    <p>Sell under Amazon Accelerator</p>
+                    <p>Protect and Build Your Brand</p>
+                    <p>Amazon Global Selling</p>
+                    <p>Supply to Amazon</p>
+                    <p>Become an Affiliate</p>
+                    <p>Fulfilment by Amazon</p>
+                    <p>Advertise Your Products</p>
+                    <p>Amazon Pay on Merchants</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Let Us Help You</h3>
+                    <p>Your Account</p>
+                    <p>Returns Centre</p>
+                    <p>Recalls and Product Safety Alerts</p>
+                    <p>100% Purchase Protection</p>
+                    <p>Amazon App Download</p>
+                    <p>Help</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Footer -->
+        <section class="footer-bottom">
+            <div class="footer-services">
+                <div>
+                    <h5>AbeBooks</h5>
+                    <p>Books, art<br>& collectibles</p>
+                </div>
+                <div>
+                    <h5>Amazon Web Services</h5>
+                    <p>Scalable Cloud<br>Computing Services</p>
+                </div>
+                <div>
+                    <h5>Audible</h5>
+                    <p>Download<br>Audio Books</p>
+                </div>
+                <div>
+                    <h5>IMDb</h5>
+                    <p>Movies, TV<br>& Celebrities</p>
+                </div>
+                <div>
+                    <h5>Shopbop</h5>
+                    <p>Designer<br>Fashion Brands</p>
+                </div>
+                <div>
+                    <h5>Amazon Business</h5>
+                    <p>Everything For<br>Your Business</p>
+                </div>
+                <div>
+                    <h5>Amazon Prime Music</h5>
+                    <p>100 million songs, ad-free<br>Over 15 million podcast episodes</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Conditions of Use & Sale</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Interest-Based Ads</a>
+            </div>
+
+            <p class="footer-copy">
+                © 1996-2025, Amazon.com, Inc. or its affiliates
+            </p>
+        </section>
+    </footer>
+</body>
+</html>
