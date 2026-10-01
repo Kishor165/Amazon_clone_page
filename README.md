@@ -34,7 +34,6 @@ https://kishor165.github.io/Amazon_clone_page/
 * JavaScript
 
 ## ✨ Features
-
 * Amazon-inspired user interface
 * Responsive webpage design
 * Navigation bar and search section
