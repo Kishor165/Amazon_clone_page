@@ -45,7 +45,6 @@ https://kishor165.github.io/Amazon_clone_page/
 * Responsive layout for different screen sizes
 
 ## 📂 Project Structure
-
 ```text
 Amazon_clone_page/
 │
