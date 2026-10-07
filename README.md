@@ -61,7 +61,6 @@ Amazon_clone_page/
 ```
 
 ## 🎯 Purpose
-
 This project was created for **study and educational purposes only** to practice and demonstrate frontend development skills, including webpage structure, responsive layouts, styling, navigation, and UI design.
 
 ## ⚠️ Disclaimer
