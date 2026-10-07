@@ -73,8 +73,6 @@ This project is **not affiliated with, sponsored by, or officially connected to 
 No commercial use is intended.
 
 ## 👨‍💻 Author
-
 **Kishor Kumar**
-
 * GitHub: https://github.com/Kishor165
 * LinkedIn: https://linkedin.com/in/kishorkumar28
