@@ -65,7 +65,6 @@ Amazon_clone_page/
 This project was created for **study and educational purposes only** to practice and demonstrate frontend development skills, including webpage structure, responsive layouts, styling, navigation, and UI design.
 
 ## ⚠️ Disclaimer
-
 This is a **student/learning project** and is intended for **study and educational purposes only**.
 
 This project is **not affiliated with, sponsored by, or officially connected to Amazon**. Amazon and related trademarks, logos, and brand assets belong to their respective owners.
