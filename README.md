@@ -45,7 +45,6 @@ https://kishor165.github.io/Amazon_clone_page/
 
 ## 📂 Project Structure
 ```text
-
 Amazon_clone_page/
 │
 ├── index.html
