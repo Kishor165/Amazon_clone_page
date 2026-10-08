@@ -3,7 +3,6 @@ A responsive **Amazon-inspired e-commerce website** developed using **HTML, CSS,
 This project recreates the look and feel of an online shopping platform with navigation, product sections, banners, and multiple product/category pages.
 
 ## 🚀 Live Demo
-
 🌐 **Website:**
 
 https://kishor165.github.io/Amazon_clone_page/
