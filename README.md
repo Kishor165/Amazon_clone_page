@@ -58,7 +58,6 @@ This project was created for **study and educational purposes only** to practice
 
 ## ⚠️ Disclaimer
 This is a **student/learning project** and is intended for **study and educational purposes only**.
-
 This project is **not affiliated with, sponsored by, or officially connected to Amazon**. Amazon and related trademarks, logos, and brand assets belong to their respective owners.
 
 No commercial use is intended.
