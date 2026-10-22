@@ -28,6 +28,7 @@ https://kishor165.github.io/Amazon_clone_page/
 * HTML5
 * CSS3
 * JavaScript
+* 
 ## ✨ Features
 * Amazon-inspired user interface
 * Responsive webpage design
