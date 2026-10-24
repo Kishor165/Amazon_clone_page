@@ -15,6 +15,7 @@ https://kishor165.github.io/Amazon_clone_page/
 <p align="center">
   <img src="pagetwo.png" alt="Amazon Clone Page Two" width="900">
 </p>
+
 ### 🖥️ Page Three
 <p align="center">
   <img src="pagethree.png" alt="Amazon Clone Page Three" width="900">
