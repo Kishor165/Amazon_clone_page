@@ -4,7 +4,6 @@ This project recreates the look and feel of an online shopping platform with nav
 
 ## 🚀 Live Demo
 🌐 **Website:**
-
 https://kishor165.github.io/Amazon_clone_page/
 
 ## 📸 Project Screenshots
