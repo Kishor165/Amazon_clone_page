@@ -8,7 +8,6 @@ This project recreates the look and feel of an online shopping platform with nav
 https://kishor165.github.io/Amazon_clone_page/
 
 ## 📸 Project Screenshots
-
 ### 🖥️ Page One
 <p align="center">
   <img src="pageone.png" alt="Amazon Clone Page One" width="900">
