@@ -22,7 +22,6 @@ https://kishor165.github.io/Amazon_clone_page/
 </p>
 
 ## 🛠️ Technologies Used
-
 * HTML5
 * CSS3
 * JavaScript
