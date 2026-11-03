@@ -58,7 +58,6 @@ This is a **student/learning project** and is intended for **study and education
 This project is **not affiliated with, sponsored by, or officially connected to Amazon**. Amazon and related trademarks, logos, and brand assets belong to their respective owners.
 
 No commercial use is intended.
-
 ## 👨‍💻 Author
 **Kishor Kumar**
 * GitHub: https://github.com/Kishor165
