@@ -1,4 +1,4 @@
-# 🛒 Amazon Clone Page
+ # 🛒 Amazon Clone Page
 A responsive **Amazon-inspired e-commerce website** developed using **HTML, CSS, and JavaScript**.
 This project recreates the look and feel of an online shopping platform with navigation, product sections, banners, and multiple product/category pages.
 
