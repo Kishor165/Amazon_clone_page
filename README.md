@@ -51,7 +51,6 @@ Amazon_clone_page/
 │
 └── README.md
 ```
-
 ## 🎯 Purpose
 This project was created for **study and educational purposes only** to practice and demonstrate frontend development skills, including webpage structure, responsive layouts, styling, navigation, and UI design.
 
